@@ -1,198 +1,95 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ... Mantenha o início do CSS anterior (Reset, Body, Header, Hero) ... */
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0f0f0f; /* Fundo bem escuro */
-    color: #ffffff; /* Texto branco */
-    line-height: 1.6;
-}
-
-header {
-    padding: 20px 5%;
-    background: rgba(0,0,0,0.8);
-    position: sticky;
-    top: 0;
-    border-bottom: 1px solid #333;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-weight: 900;
-    font-size: 1.5rem;
-    letter-spacing: -1px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-}
-
-.hero {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.titulo-centralizado {
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1552667466-07770ae110d0?auto=format&fit=crop&q=80&w=1000'); /* Imagem genérica de futebol */
-    background-size: cover;
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 60px;
+    font-size: 3rem;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 10px;
-}
-
-.container {
-    padding: 80px 10%;
-}
-
-.bg-dark-alt {
-    background-color: #1a1a1a;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    border-left: 5px solid #fff;
-    padding-left: 15px;
-}
-
-/* Nova Seção de Destaque de Atleta */
-.destaque-atleta {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    background-color: #222;
-    padding: 30px;
-    border-radius: 12px;
-    border: 2px solid #333;
-    margin-bottom: 40px;
-    transition: transform 0.3s ease;
-}
-
-.destaque-atleta:hover {
-    transform: translateY(-5px);
-}
-
-.atleta-data {
-    flex: 2;
-}
-
-.atleta-data h3 {
-    color: #fff;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
-}
-
-.atleta-data p {
-    color: #ccc;
-    margin-bottom: 5px;
-}
-
-.atleta-numeros {
-    list-style: none;
+/* Galeria Vertical */
+.galeria-vertical {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
+    justify-content: center;
+    gap: 40px;
 }
 
-.atleta-numeros li {
-    background: #333;
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-.atleta-numeros-destaque {
-    font-size: 1.5rem;
-    display: block;
-    margin-bottom: 3px;
-    line-height: 1;
-}
-
-/* Destaque para gols */
-.atleta-numeros li:nth-child(2) .atleta-numeros-destaque {
-    color: #00ff00;
-}
-
-.atleta-imagem-container {
-    flex: 1;
-    max-width: 300px;
-    border-radius: 10px;
+.card-atleta-v {
+    background: #151515;
+    width: 350px; /* Largura do card */
+    border-radius: 20px;
     overflow: hidden;
-    border: 2px solid #555;
-    box-shadow: 0 0 15px rgba(0,0,0,0.6), 0 0 5px rgba(100, 100, 255, 0.4); /* Efeito de glow */
-}
-
-.atleta-imagem {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Sub-título da tabela */
-.container h3 {
-    color: #fff;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #222;
-    padding: 20px;
-    border-radius: 8px;
     border: 1px solid #333;
+    transition: 0.4s;
 }
 
-table {
+.card-atleta-v:hover {
+    transform: translateY(-15px);
+    border-color: #555;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.imagem-wrapper {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    padding: 20px;
+    background: #111;
+    display: flex;
+    justify-content: center;
 }
 
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #333;
+.imagem-wrapper img {
+    width: 100%; /* Imagem ocupa a largura toda do container interno */
+    height: auto;
+    border-radius: 10px;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
 }
 
-th {
-    background-color: #333;
+.info-v {
+    padding: 25px;
+    text-align: center;
+}
+
+.info-v h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.tag {
+    color: #888;
     text-transform: uppercase;
     font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
 }
 
-footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 0.8rem;
-    color: #666;
+/* Grid de Números embaixo da foto */
+.grid-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
+
+.stat-item {
+    background: #222;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+.stat-item span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.g-color span {
+    color: #00ff00; /* Destaque para recordes */
+}
+
+/* ... Restante do CSS anterior (Tabela, Footer) ... */
