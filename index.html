@@ -1,93 +1,123 @@
-<section id="estatisticas" class="page">
-    <div class="container">
-        <div class="page-header">
-            <span class="ice-tag">Performance Tracker</span>
-            <h2 class="page-title">Hall da Fama</h2>
-        </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSB SÓ FAR | Ice Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <div class="stats-premium-grid">
-            
-            <div class="player-stats-card">
-                <div class="player-photo-medium">
-                    <img src="luigi_card.png" alt="Luigi Stats">
+    <header>
+        <nav>
+            <div class="logo">BSB<span>SÓFAR</span></div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="changeTab('home')">Início</a></li>
+                <li><a href="#" onclick="changeTab('noticias')">Notícias</a></li>
+                <li><a href="#" onclick="changeTab('elenco')">Elenco</a></li>
+                <li><a href="#" onclick="changeTab('estatisticas')">Estatísticas</a></li>
+                <li><a href="#" onclick="changeTab('clube')">O Clube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <span class="tag">BRASÍLIA • PRO CLUBS</span>
+                <h1>ICE COLD<br>PERFORMANCE</h1>
+                <p>Acompanhe a trajetória do BSB SÓ FAR. Frieza tática e elite competitiva.</p>
+                <button class="btn-primary" onclick="changeTab('elenco')">Ver Elenco</button>
+            </div>
+        </section>
+
+        <section id="noticias" class="tab-content">
+            <div class="container">
+                <h2 class="title">Notícias</h2>
+                <div class="news-item">
+                    <span class="date">08 MAR 2026</span>
+                    <h3>Magician: 358 Gols e contando</h3>
+                    <p>Luigi mantém a média absurda e lidera a artilharia da temporada.</p>
                 </div>
-                <div class="player-stats-content">
-                    <h3>Luigi <small>(Magician)</small></h3>
-                    <div class="stats-badges">
-                        <div class="s-badge">
-                            <span class="s-label">Partidas</span>
-                            <span class="s-num">189</span>
+                <div class="news-item">
+                    <span class="date">05 MAR 2026</span>
+                    <h3>Garçom de Gelo</h3>
+                    <p>Walison (Insanity) atinge a marca de 342 assistências no ano.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="elenco" class="tab-content">
+            <div class="container">
+                <h2 class="title">Elenco Principal</h2>
+                <div class="elenco-grid">
+                    <div class="barca-card">
+                        <img src="luigi_card.png" alt="Luigi">
+                        <div class="barca-info">
+                            <span class="b-num">69</span>
+                            <div class="b-name"><span>Atacante</span>LUIGI</div>
                         </div>
-                        <div class="s-badge highlight-blue">
-                            <span class="s-label">Gols</span>
-                            <span class="s-num">358</span>
+                    </div>
+                    <div class="barca-card">
+                        <img src="walison_card.png" alt="Walison">
+                        <div class="barca-info">
+                            <span class="b-num">92</span>
+                            <div class="b-name"><span>Meia</span>WALISON</div>
                         </div>
-                        <div class="s-badge">
-                            <span class="s-label">Assistências</span>
-                            <span class="s-num">93</span>
-                        </div>
-                        <div class="s-badge">
-                            <span class="s-label">Melhor em Campo</span>
-                            <span class="s-num">44</span>
+                    </div>
+                    <div class="barca-card">
+                        <img src="nicolas_card.png" alt="Nicolas">
+                        <div class="barca-info">
+                            <span class="b-num">10</span>
+                            <div class="b-name"><span>Meia</span>NICOLAS</div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="player-stats-card">
-                <div class="player-photo-medium">
-                    <img src="walison_card.png" alt="Walison Stats">
-                </div>
-                <div class="player-stats-content">
-                    <h3>Walison <small>(Insanity)</small></h3>
-                    <div class="stats-badges">
-                        <div class="s-badge">
-                            <span class="s-label">Partidas</span>
-                            <span class="s-num">300</span>
+        <section id="estatisticas" class="tab-content">
+            <div class="container">
+                <h2 class="title">Estatísticas</h2>
+                <div class="stats-grid">
+                    <div class="stat-premium">
+                        <div class="stat-photo"><img src="luigi_card.png"></div>
+                        <div class="stat-data">
+                            <h3>Luigi (Magician)</h3>
+                            <div class="data-box">Gols <span>358</span></div>
+                            <div class="data-box">Jogos <span>189</span></div>
+                            <div class="data-box blue">MVP <span>44</span></div>
                         </div>
-                        <div class="s-badge">
-                            <span class="s-label">Gols</span>
-                            <span class="s-num">201</span>
-                        </div>
-                        <div class="s-badge highlight-blue">
-                            <span class="s-label">Assistências</span>
-                            <span class="s-num">342</span>
-                        </div>
-                        <div class="s-badge">
-                            <span class="s-label">Melhor em Campo</span>
-                            <span class="s-num">120</span>
+                    </div>
+                    <div class="stat-premium">
+                        <div class="stat-photo"><img src="walison_card.png"></div>
+                        <div class="stat-data">
+                            <h3>Walison (Insanity)</h3>
+                            <div class="data-box">Assist <span>342</span></div>
+                            <div class="data-box">Jogos <span>300</span></div>
+                            <div class="data-box blue">MVP <span>120</span></div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="player-stats-card">
-                <div class="player-photo-medium">
-                    <img src="nicolas_card.png" alt="Nicolas Stats">
-                </div>
-                <div class="player-stats-content">
-                    <h3>Nicolas <small>(Maestro)</small></h3>
-                    <div class="stats-badges">
-                        <div class="s-badge">
-                            <span class="s-label">Partidas</span>
-                            <span class="s-num">211</span>
-                        </div>
-                        <div class="s-badge">
-                            <span class="s-label">Gols</span>
-                            <span class="s-num">103</span>
-                        </div>
-                        <div class="s-badge">
-                            <span class="s-label">Assistências</span>
-                            <span class="s-num">97</span>
-                        </div>
-                        <div class="s-badge highlight-blue">
-                            <span class="s-label">Melhor em Campo</span>
-                            <span class="s-num">6</span>
-                        </div>
-                    </div>
-                </div>
+        <section id="clube" class="tab-content">
+            <div class="container center">
+                <h2 class="title">O Clube</h2>
+                <p class="history">O BSB SÓ FAR é uma organização de Pro Clubs sediada em Brasília, focada em alto nível competitivo e lealdade entre seus membros desde 2024.</p>
             </div>
+        </section>
+    </main>
 
-        </div>
-    </div>
-</section>
+    <script>
+        function changeTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>
