@@ -1,154 +1,85 @@
-/* =========================================
-   CONFIGURAÇÕES GLOBAIS E TEMA ICE
-   ========================================= */
 :root {
-    --ice-bg: #f8fbff;
-    --ice-blue: #007bff;
-    --deep-black: #0a0a0a;
-    --text-gray: #4a5568;
+    --ice: #f8fbff;
+    --blue: #0070f3;
+    --black: #0a0a0a;
     --white: #ffffff;
-    --gray-border: #e1e8ed;
+    --gray: #eaeaea;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--deep-black); overflow-x: hidden; }
+body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
 
-/* =========================================
-   HEADER GLASSMORPHISM
-   ========================================= */
+/* Navegação */
 header {
     position: fixed; width: 100%; z-index: 1000;
-    background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--gray-border); padding: 20px 8%;
+    background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);
+    padding: 20px 8%; border-bottom: 1px solid var(--gray);
 }
-
 nav { display: flex; justify-content: space-between; align-items: center; }
-
-.logo { font-family: 'Syncopate', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; }
-.logo span { color: var(--ice-blue); }
-
+.logo { font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+.logo span { color: var(--blue); }
 .nav-links { display: flex; list-style: none; }
-.nav-links li a { 
-    margin-left: 30px; text-decoration: none; color: var(--deep-black); 
-    font-weight: 800; font-size: 0.7rem; text-transform: uppercase; 
-    letter-spacing: 1px; transition: 0.3s;
-}
-.nav-links li a:hover { color: var(--ice-blue); }
+.nav-links a { margin-left: 25px; text-decoration: none; color: var(--black); font-weight: 900; font-size: 0.7rem; text-transform: uppercase; transition: 0.3s; }
+.nav-links a:hover { color: var(--blue); }
 
-/* =========================================
-   LÓGICA DE ABAS
-   ========================================= */
-.tab-content { display: none; min-height: 100vh; }
-.tab-content.active { display: block; animation: fadeInPage 0.6s ease-out; }
+/* Sistema de Abas */
+.tab-content { display: none; min-height: 100vh; padding-top: 100px; animation: fadeIn 0.5s ease; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-@keyframes fadeInPage {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+/* Home / Hero */
+.hero-premium { height: 90vh; display: flex; align-items: center; padding: 0 8%; background: radial-gradient(circle at 70% 30%, #eef6ff 0%, #fff 100%); }
+.hero-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.hero-text { max-width: 600px; }
+.ice-tag { color: var(--blue); font-weight: 900; letter-spacing: 4px; font-size: 0.7rem; border-left: 4px solid var(--blue); padding-left: 15px; }
+.hero-text h1 { font-family: 'Syncopate', sans-serif; font-size: 4rem; line-height: 1.1; margin: 20px 0; }
+.hero-text .blue { color: var(--blue); }
+.hero-btns { display: flex; gap: 20px; margin-top: 30px; }
+.btn-main { background: var(--black); color: white; border: none; padding: 18px 35px; font-weight: 900; text-transform: uppercase; cursor: pointer; }
+.btn-outline { background: transparent; border: 2px solid var(--black); padding: 18px 35px; font-weight: 900; text-transform: uppercase; cursor: pointer; }
 
-/* =========================================
-   PÁGINA INÍCIO (HERO PREMIUM)
-   ========================================= */
-.hero-premium {
-    height: 100vh; width: 100%; display: flex; align-items: center;
-    background: radial-gradient(circle at 70% 30%, #e0f2fe 0%, #ffffff 100%);
-}
+/* Card Flutuante Home */
+.hero-visual img { width: 350px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1)); animation: float 6s infinite ease-in-out; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
 
-.hero-container { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0 8%; }
-.hero-text-content { max-width: 650px; }
+/* Containers */
+.container { padding: 60px 8%; }
+.title { font-family: 'Syncopate', sans-serif; font-size: 2.2rem; margin-bottom: 40px; }
 
-.main-title { 
-    font-family: 'Syncopate', sans-serif; font-size: clamp(2.5rem, 6vw, 4rem); 
-    line-height: 1.1; margin: 25px 0; color: var(--deep-black); 
-}
-.blue-text { color: var(--ice-blue); }
+/* Elenco Barcelona */
+.elenco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.barca-card { background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--gray); transition: 0.3s; }
+.barca-card:hover { transform: translateY(-10px); border-color: var(--blue); box-shadow: 0 10px 30px rgba(0,112,243,0.1); }
+.barca-card img { width: 100%; }
+.barca-footer { background: var(--black); color: white; padding: 25px; display: flex; align-items: center; gap: 20px; }
+.b-num { font-family: 'Syncopate', sans-serif; font-size: 2rem; color: var(--blue); }
+.b-name span { display: block; font-size: 0.6rem; color: #888; text-transform: uppercase; font-weight: 900; }
+.b-name { font-family: 'Syncopate', sans-serif; font-size: 1rem; }
 
-.ice-tag { 
-    font-weight: 900; text-transform: uppercase; letter-spacing: 4px; 
-    font-size: 0.75rem; color: var(--ice-blue); border-left: 4px solid var(--ice-blue); 
-    padding-left: 15px; 
-}
+/* Estatísticas Premium */
+.stats-premium-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 30px; }
+.stat-card { background: white; border: 1px solid var(--gray); border-radius: 20px; display: flex; overflow: hidden; }
+.stat-img { width: 140px; background: #000; display: flex; align-items: center; }
+.stat-img img { width: 100%; }
+.stat-info { padding: 25px; flex: 1; }
+.stat-info h3 { font-family: 'Syncopate', sans-serif; font-size: 0.9rem; margin-bottom: 15px; border-bottom: 2px solid var(--ice); padding-bottom: 10px; }
+.grid-data { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.s-box { background: var(--ice); padding: 12px; border-radius: 8px; font-size: 0.6rem; font-weight: 900; color: #777; text-transform: uppercase; }
+.s-box span { display: block; font-size: 1.4rem; color: var(--black); margin-top: 5px; }
+.s-box.highlight span { color: var(--blue); }
 
-.hero-description { font-size: 1.1rem; color: var(--text-gray); line-height: 1.8; margin-bottom: 40px; }
-
-.hero-actions { display: flex; gap: 20px; }
-
-.btn-ice {
-    background: var(--deep-black); color: white; padding: 20px 40px; border: none;
-    font-weight: 900; text-transform: uppercase; cursor: pointer; transition: 0.4s;
-}
-.btn-ice:hover { background: var(--ice-blue); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3); }
-
-.btn-outline {
-    background: transparent; color: var(--deep-black); padding: 20px 40px;
-    border: 2px solid var(--deep-black); font-weight: 900; text-transform: uppercase; cursor: pointer; transition: 0.3s;
-}
-.btn-outline:hover { background: var(--deep-black); color: white; }
-
-.hero-visual { position: relative; width: 40%; display: flex; justify-content: center; }
-.hero-card-img { width: 360px; height: auto; border-radius: 20px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15)); }
-
-.floating-card { animation: floatAnim 6s ease-in-out infinite; }
-@keyframes floatAnim {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-/* =========================================
-   NOTÍCIAS
-   ========================================= */
-.container { padding: 120px 8% 60px; }
-.section-header { margin-bottom: 50px; }
-.news-box { background: white; padding: 35px; border-left: 6px solid var(--ice-blue); margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
-.news-box h3 { font-size: 1.8rem; margin: 10px 0; }
-.date { font-weight: 900; color: var(--ice-blue); font-size: 0.85rem; }
-
-/* =========================================
-   ELENCO (BARCELONA STYLE)
-   ========================================= */
-.barca-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-.barca-card { background: white; border-radius: 15px; overflow: hidden; border: 1px solid var(--gray-border); transition: 0.4s; }
-.barca-card:hover { transform: translateY(-10px); border-color: var(--ice-blue); }
-.barca-card img { width: 100%; display: block; }
-
-.barca-info { background: var(--deep-black); color: white; padding: 25px; display: flex; align-items: center; gap: 20px; }
-.b-num { font-family: 'Syncopate', sans-serif; font-size: 2.2rem; font-weight: 700; color: var(--ice-blue); }
-.b-name span { display: block; font-size: 0.65rem; color: #888; text-transform: uppercase; font-weight: 900; }
-.b-name { font-family: 'Syncopate', sans-serif; font-size: 1.1rem; }
-
-/* =========================================
-   ESTATÍSTICAS (PREMIUM CARDS)
-   ========================================= */
-.stats-premium-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 40px; }
-.stat-premium-card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid var(--gray-border); box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-
-.stat-photo-medium { width: 100%; height: 350px; background: #000; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.stat-photo-medium img { height: 110%; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); transition: 0.5s; }
-.stat-premium-card:hover .stat-photo-medium img { transform: scale(1.05); }
-
-.stat-content { padding: 30px; }
-.stat-content h3 { font-family: 'Syncopate', sans-serif; font-size: 1rem; margin-bottom: 25px; border-bottom: 2px solid var(--ice-bg); padding-bottom: 10px; }
-.stat-content h3 small { color: var(--ice-blue); display: block; margin-top: 5px; font-size: 0.65rem; }
-
-.stat-data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.s-box { background: var(--ice-bg); padding: 15px; border-radius: 10px; font-size: 0.6rem; text-transform: uppercase; font-weight: 900; color: #888; }
-.s-box span { display: block; font-size: 1.5rem; color: var(--deep-black); margin-top: 5px; }
-.s-box.highlight span { color: var(--ice-blue); }
-
-/* =========================================
-   O CLUBE E FOOTER
-   ========================================= */
+/* Notícias e História */
+.news-box { background: white; padding: 35px; border-left: 6px solid var(--blue); margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+.date { color: var(--blue); font-weight: 900; font-size: 0.8rem; }
 .text-center { text-align: center; }
-.history-text { font-size: 1.4rem; color: var(--text-gray); line-height: 1.8; max-width: 900px; margin: 0 auto; }
+.history-txt { font-size: 1.4rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.8; }
 
-footer { padding: 80px 8%; text-align: center; border-top: 1px solid var(--gray-border); margin-top: 50px; }
-footer p { font-size: 0.75rem; font-weight: 800; color: #bbb; text-transform: uppercase; letter-spacing: 2px; margin-top: 15px; }
+footer { padding: 60px; text-align: center; border-top: 1px solid var(--gray); font-size: 0.7rem; font-weight: 800; color: #bbb; text-transform: uppercase; letter-spacing: 2px; }
 
-/* AJUSTES RESPONSIVOS */
+/* Responsividade */
 @media (max-width: 1024px) {
-    .hero-container { flex-direction: column; text-align: center; padding-top: 150px; }
-    .hero-visual { width: 100%; margin-top: 60px; }
-    .hero-actions { justify-content: center; }
-    .stats-premium-grid { grid-template-columns: 1fr; }
+    .hero-container { flex-direction: column; text-align: center; }
+    .hero-visual { margin-top: 50px; }
+    .hero-btns { justify-content: center; }
 }
