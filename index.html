@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Ice White Elite</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <title>BSB SÓ FAR | Elite Dark Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,98 +22,99 @@
         </nav>
     </header>
 
-    <main id="main-portal">
-        <section id="home" class="tab-page active">
-            <div class="hero-wrapper">
-                <div class="hero-info" data-aos="fade-right">
-                    <span class="ice-badge">Brasília • Pro Clubs</span>
-                    <h1>GELO NO SANGUE.<br><span class="blue-text">PLANALTO NO CORAÇÃO.</span></h1>
-                    <p>Erguido sobre os traços monumentais de Oscar Niemeyer, o <strong>BSB SÓ FAR</strong> traz a precisão da capital para o Pro Clubs. Não somos apenas um time; somos a frieza tática de Brasília em forma de futebol virtual.</p>
+    <main>
+        <section id="home" class="tab-pane active">
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="tag">Brasília • Pro Clubs Organization</span>
+                    <h1>GELO NO <span class="neon">SANGUE.</span><br>PLANALTO NO <span class="neon">CORAÇÃO.</span></h1>
+                    <p>Nascido entre os traços monumentais de Brasília, o <strong>BSB SÓ FAR</strong> representa a elite do futebol virtual. Unimos frieza tática e a força da capital federal para dominar os gramados.</p>
                     <div class="hero-btns">
-                        <button class="btn-main" onclick="showTab('elenco')">Ver Elenco</button>
-                        <button class="btn-sec" onclick="showTab('clube')">Nossa História</button>
+                        <button class="btn-primary" onclick="showTab('elenco')">Ver Elenco</button>
+                        <button class="btn-outline" onclick="showTab('stats')">Estatísticas</button>
                     </div>
                 </div>
-                <div class="hero-visual" data-aos="zoom-in">
-                    <div class="floating-box">
-                        <img src="nicolas_card.png" alt="Destaque Nicolas" class="card-hero">
-                    </div>
+                <div class="hero-visual">
+                    <img src="nicolas_card.png" alt="Destaque" class="floating-img">
                 </div>
             </div>
         </section>
 
-        <section id="noticias" class="tab-page">
-            <div class="content-container">
-                <h2 class="section-title" data-aos="fade-up">Press Release</h2>
-                <div class="news-grid">
-                    <div class="news-item" data-aos="fade-up">
-                        <span class="n-date">08/03/2026</span>
-                        <h3>Magician: O Senhor dos Gols</h3>
-                        <p>Luigi alcança a marca de 358 gols e se isola como o maior artilheiro da história do BSB.</p>
-                    </div>
-                    <div class="news-item" data-aos="fade-up" data-aos-delay="100">
-                        <span class="n-date">05/03/2026</span>
-                        <h3>Assistências no Gelo</h3>
-                        <p>Walison (Insanity) atinge 342 passes para gol, dominando o meio-campo da liga.</p>
-                    </div>
+        <section id="noticias" class="tab-pane">
+            <div class="container">
+                <h2 class="section-title">Notícias</h2>
+                <div class="news-list">
+                    <article class="news-card">
+                        <span class="neon">08 MAR 2026</span>
+                        <h3>Magician: 358 Gols e contando</h3>
+                        <p>Luigi segue batendo recordes e se isola como o maior artilheiro da história do clube.</p>
+                    </article>
+                    <article class="news-card">
+                        <span class="neon">05 MAR 2026</span>
+                        <h3>Recorde de Assistências</h3>
+                        <p>Walison (Insanity) atinge 342 passes decisivos, consolidando sua marca de maior garçom.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="elenco" class="tab-page">
-            <div class="content-container">
-                <h2 class="section-title" data-aos="fade-up">Roster Oficial</h2>
-                <div class="roster-grid">
-                    <div class="barca-card" data-aos="flip-left">
+        <section id="elenco" class="tab-pane">
+            <div class="container">
+                <h2 class="section-title">Elenco de Elite</h2>
+                <div class="grid">
+                    <div class="player-card">
                         <img src="luigi_card.png" alt="Luigi">
-                        <div class="barca-footer">
-                            <span class="b-num">69</span>
-                            <div class="b-txt"><span>Atacante</span>LUIGI</div>
-                        </div>
+                        <div class="p-footer"><span>69</span> LUIGI</div>
                     </div>
-                    <div class="barca-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="player-card">
                         <img src="walison_card.png" alt="Walison">
-                        <div class="barca-footer">
-                            <span class="b-num">92</span>
-                            <div class="b-txt"><span>Meia</span>WALISON</div>
-                        </div>
+                        <div class="p-footer"><span>92</span> WALISON</div>
                     </div>
-                    <div class="barca-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="player-card">
                         <img src="nicolas_card.png" alt="Nicolas">
-                        <div class="barca-footer">
-                            <span class="b-num">10</span>
-                            <div class="b-txt"><span>Maestro</span>NICOLAS</div>
-                        </div>
+                        <div class="p-footer"><span>10</span> NICOLAS</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="stats" class="tab-page">
-            <div class="content-container">
-                <h2 class="section-title" data-aos="fade-up">Hall of Fame</h2>
+        <section id="stats" class="tab-pane">
+            <div class="container">
+                <h2 class="section-title">Hall da Fama</h2>
                 <div class="stats-premium-grid">
-                    <div class="premium-stat-card" data-aos="fade-up">
-                        <div class="p-stat-img"><img src="nicolas_card.png"></div>
-                        <div class="p-stat-data">
-                            <h3>NICOLAS <span>(Maestro)</span></h3>
-                            <div class="s-grid">
-                                <div class="s-box highlight">Gols <b>103</b></div>
-                                <div class="s-box highlight">Assist <b>97</b></div>
-                                <div class="s-box">Jogos <b>211</b></div>
-                                <div class="s-box">MVP <b>6</b></div>
+                    <div class="s-card">
+                        <div class="s-img"><img src="luigi_card.png"></div>
+                        <div class="s-info">
+                            <h3>LUIGI (Magician)</h3>
+                            <div class="s-grid-data">
+                                <div class="box">Jogos <b>189</b></div>
+                                <div class="box highlight">Gols <b>358</b></div>
+                                <div class="box">Assist <b>93</b></div>
+                                <div class="box">MVP <b>44</b></div>
                             </div>
                         </div>
                     </div>
-                    <div class="premium-stat-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="p-stat-img"><img src="walison_card.png"></div>
-                        <div class="p-stat-data">
-                            <h3>WALISON <span>(Insanity)</span></h3>
-                            <div class="s-grid">
-                                <div class="s-box">Gols <b>201</b></div>
-                                <div class="s-box highlight">Assist <b>342</b></div>
-                                <div class="s-box">Jogos <b>300</b></div>
-                                <div class="s-box">MVP <b>120</b></div>
+                    <div class="s-card">
+                        <div class="s-img"><img src="walison_card.png"></div>
+                        <div class="s-info">
+                            <h3>WALISON (Insanity)</h3>
+                            <div class="s-grid-data">
+                                <div class="box">Jogos <b>300</b></div>
+                                <div class="box">Gols <b>201</b></div>
+                                <div class="box highlight">Assist <b>342</b></div>
+                                <div class="box">MVP <b>120</b></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-card">
+                        <div class="s-img"><img src="nicolas_card.png"></div>
+                        <div class="s-info">
+                            <h3>NICOLAS (Maestro)</h3>
+                            <div class="s-grid-data">
+                                <div class="box">Jogos <b>211</b></div>
+                                <div class="box highlight">Gols <b>103</b></div>
+                                <div class="box highlight">Assist <b>97</b></div>
+                                <div class="box">MVP <b>6</b></div>
                             </div>
                         </div>
                     </div>
@@ -122,28 +122,24 @@
             </div>
         </section>
 
-        <section id="clube" class="tab-page">
-            <div class="content-container center">
-                <h2 class="section-title" data-aos="fade-up">Nossa Origem</h2>
-                <p class="clube-text" data-aos="fade-up">O BSB SÓ FAR não é apenas um time de videogame. É a união de amigos da Capital Federal que decidiram levar o nome de Brasília ao topo do Pro Clubs. Nossa filosofia é simples: união, técnica e a frieza necessária para decidir campeonatos.</p>
+        <section id="clube" class="tab-pane">
+            <div class="container">
+                <h2 class="section-title">O Clube</h2>
+                <p class="history-txt">O <strong>BSB SÓ FAR</strong> é mais que um time; é uma dinastia construída em Brasília. Desde 2024, competimos no mais alto nível do Pro Clubs, levando o nome da capital federal ao topo através da lealdade e da técnica apurada.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 BSB SÓ FAR | Brasília, Distrito Federal.</p>
+        <p>&copy; 2026 - BSB SÓ FAR | Official Dark Elite</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
-
         function showTab(tabId) {
-            const tabs = document.querySelectorAll('.tab-page');
+            const tabs = document.querySelectorAll('.tab-pane');
             tabs.forEach(tab => tab.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
             window.scrollTo(0,0);
-            AOS.refresh();
         }
     </script>
 </body>
