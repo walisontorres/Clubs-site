@@ -61,3 +61,53 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .date { color: var(--blue); font-weight: 900; font-size: 0.8rem; }
 .center { text-align: center; }
 .history { font-size: 1.5rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.8; }
+/* Transição suave para troca de abas */
+.tab-content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    opacity: 1;
+}
+
+/* Efeito de Brilho Ice Blue nos cards ao passar o mouse */
+.barca-card:hover, .stat-premium:hover {
+    box-shadow: 0 10px 30px rgba(0, 112, 243, 0.2);
+    border-color: var(--blue);
+    transform: translateY(-8px);
+}
+
+/* Animação suave no menu */
+.nav-links a {
+    position: relative;
+    transition: 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--blue);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Estilização do Botão Principal */
+.btn-primary {
+    transition: 0.4s;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--black);
+    border-color: var(--black);
+    letter-spacing: 2px;
+}
