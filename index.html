@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Ice White Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>BSB SÓ FAR | Ice White Elite</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,118 +14,107 @@
         <nav>
             <div class="logo">BSB<span>SÓFAR</span></div>
             <ul class="nav-links">
-                <li><a href="#" onclick="changeTab(event, 'home')">Início</a></li>
-                <li><a href="#" onclick="changeTab(event, 'noticias')">Notícias</a></li>
-                <li><a href="#" onclick="changeTab(event, 'elenco')">Elenco</a></li>
-                <li><a href="#" onclick="changeTab(event, 'estatisticas')">Estatísticas</a></li>
-                <li><a href="#" onclick="changeTab(event, 'clube')">O Clube</a></li>
+                <li><a href="javascript:void(0)" onclick="showTab('home')">Início</a></li>
+                <li><a href="javascript:void(0)" onclick="showTab('noticias')">Notícias</a></li>
+                <li><a href="javascript:void(0)" onclick="showTab('elenco')">Elenco</a></li>
+                <li><a href="javascript:void(0)" onclick="showTab('stats')">Estatísticas</a></li>
+                <li><a href="javascript:void(0)" onclick="showTab('clube')">O Clube</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="tab-content active">
-            <div class="hero-premium">
-                <div class="hero-container">
-                    <div class="hero-text" data-aos="fade-right">
-                        <span class="ice-tag">Brasília • Pro Clubs Elite</span>
-                        <h1>GELO NO <span class="blue">SANGUE.</span><br>PLANALTO NO <span class="blue">CORAÇÃO.</span></h1>
-                        <p>Nascido na Capital Federal, o <strong>BSB SÓ FAR</strong> une a frieza tática à precisão monumental de Brasília para dominar os gramados virtuais.</p>
-                        <div class="hero-btns">
-                            <button class="btn-main" onclick="changeTab(event, 'elenco')">Ver Elenco</button>
-                            <button class="btn-outline" onclick="changeTab(event, 'estatisticas')">Ver Stats</button>
-                        </div>
+    <main id="main-portal">
+        <section id="home" class="tab-page active">
+            <div class="hero-wrapper">
+                <div class="hero-info" data-aos="fade-right">
+                    <span class="ice-badge">Brasília • Pro Clubs</span>
+                    <h1>GELO NO SANGUE.<br><span class="blue-text">PLANALTO NO CORAÇÃO.</span></h1>
+                    <p>Erguido sobre os traços monumentais de Oscar Niemeyer, o <strong>BSB SÓ FAR</strong> traz a precisão da capital para o Pro Clubs. Não somos apenas um time; somos a frieza tática de Brasília em forma de futebol virtual.</p>
+                    <div class="hero-btns">
+                        <button class="btn-main" onclick="showTab('elenco')">Ver Elenco</button>
+                        <button class="btn-sec" onclick="showTab('clube')">Nossa História</button>
                     </div>
-                    <div class="hero-visual" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="floating-card">
-                            <img src="nicolas_card.png" alt="Card Destaque">
-                        </div>
+                </div>
+                <div class="hero-visual" data-aos="zoom-in">
+                    <div class="floating-box">
+                        <img src="nicolas_card.png" alt="Destaque Nicolas" class="card-hero">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="noticias" class="tab-content">
-            <div class="container">
-                <h2 class="title" data-aos="fade-up">Notícias</h2>
-                <div class="news-list">
-                    <article class="news-box" data-aos="fade-up" data-aos-delay="100">
-                        <span class="date">08 MAR 2026</span>
-                        <h3>Magician: 358 Gols Históricos</h3>
-                        <p>Luigi reafirma sua posição como o maior artilheiro da história do clube.</p>
-                    </article>
-                    <article class="news-box" data-aos="fade-up" data-aos-delay="200">
-                        <span class="date">05 MAR 2026</span>
-                        <h3>Recorde de Assistências</h3>
-                        <p>Walison (Insanity) atinge 342 passes decisivos na temporada.</p>
+        <section id="noticias" class="tab-page">
+            <div class="content-container">
+                <h2 class="section-title" data-aos="fade-up">Press Release</h2>
+                <div class="news-grid">
+                    <div class="news-item" data-aos="fade-up">
+                        <span class="n-date">08/03/2026</span>
+                        <h3>Magician: O Senhor dos Gols</h3>
+                        <p>Luigi alcança a marca de 358 gols e se isola como o maior artilheiro da história do BSB.</p>
+                    </div>
+                    <div class="news-item" data-aos="fade-up" data-aos-delay="100">
+                        <span class="n-date">05/03/2026</span>
+                        <h3>Assistências no Gelo</h3>
+                        <p>Walison (Insanity) atinge 342 passes para gol, dominando o meio-campo da liga.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="elenco" class="tab-content">
-            <div class="container">
-                <h2 class="title" data-aos="fade-up">Elenco Principal</h2>
-                <div class="elenco-grid">
-                    <div class="barca-card" data-aos="zoom-in" data-aos-delay="100">
+        <section id="elenco" class="tab-page">
+            <div class="content-container">
+                <h2 class="section-title" data-aos="fade-up">Roster Oficial</h2>
+                <div class="roster-grid">
+                    <div class="barca-card" data-aos="flip-left">
                         <img src="luigi_card.png" alt="Luigi">
                         <div class="barca-footer">
                             <span class="b-num">69</span>
-                            <div class="b-name"><span>Atacante</span>LUIGI</div>
+                            <div class="b-txt"><span>Atacante</span>LUIGI</div>
                         </div>
                     </div>
-                    <div class="barca-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="barca-card" data-aos="flip-left" data-aos-delay="100">
                         <img src="walison_card.png" alt="Walison">
                         <div class="barca-footer">
                             <span class="b-num">92</span>
-                            <div class="b-name"><span>Meia</span>WALISON</div>
+                            <div class="b-txt"><span>Meia</span>WALISON</div>
                         </div>
                     </div>
-                    <div class="barca-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="barca-card" data-aos="flip-left" data-aos-delay="200">
                         <img src="nicolas_card.png" alt="Nicolas">
                         <div class="barca-footer">
                             <span class="b-num">10</span>
-                            <div class="b-name"><span>Meia</span>NICOLAS</div>
+                            <div class="b-txt"><span>Maestro</span>NICOLAS</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="estatisticas" class="tab-content">
-            <div class="container">
-                <h2 class="title" data-aos="fade-up">Estatísticas</h2>
+        <section id="stats" class="tab-page">
+            <div class="content-container">
+                <h2 class="section-title" data-aos="fade-up">Hall of Fame</h2>
                 <div class="stats-premium-grid">
-                    <div class="stat-card" data-aos="fade-right">
-                        <div class="stat-img"><img src="luigi_card.png"></div>
-                        <div class="stat-info">
-                            <h3>LUIGI <small>(Magician)</small></h3>
-                            <div class="grid-data">
-                                <div class="s-box">Gols <span>358</span></div>
-                                <div class="s-box">Jogos <span>189</span></div>
-                                <div class="s-box highlight">MVP <span>44</span></div>
+                    <div class="premium-stat-card" data-aos="fade-up">
+                        <div class="p-stat-img"><img src="nicolas_card.png"></div>
+                        <div class="p-stat-data">
+                            <h3>NICOLAS <span>(Maestro)</span></h3>
+                            <div class="s-grid">
+                                <div class="s-box highlight">Gols <b>103</b></div>
+                                <div class="s-box highlight">Assist <b>97</b></div>
+                                <div class="s-box">Jogos <b>211</b></div>
+                                <div class="s-box">MVP <b>6</b></div>
                             </div>
                         </div>
                     </div>
-                    <div class="stat-card" data-aos="fade-right" data-aos-delay="200">
-                        <div class="stat-img"><img src="walison_card.png"></div>
-                        <div class="stat-info">
-                            <h3>WALISON <small>(Insanity)</small></h3>
-                            <div class="grid-data">
-                                <div class="s-box highlight">Assist <span>342</span></div>
-                                <div class="s-box">Jogos <span>300</span></div>
-                                <div class="s-box">MVP <span>120</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="stat-card" data-aos="fade-right" data-aos-delay="400">
-                        <div class="stat-img"><img src="nicolas_card.png"></div>
-                        <div class="stat-info">
-                            <h3>NICOLAS <small>(Maestro)</small></h3>
-                            <div class="grid-data">
-                                <div class="s-box highlight">Gols <span>103</span></div>
-                                <div class="s-box">Jogos <span>211</span></div>
-                                <div class="s-box highlight">Assist <span>97</span></div>
+                    <div class="premium-stat-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="p-stat-img"><img src="walison_card.png"></div>
+                        <div class="p-stat-data">
+                            <h3>WALISON <span>(Insanity)</span></h3>
+                            <div class="s-grid">
+                                <div class="s-box">Gols <b>201</b></div>
+                                <div class="s-box highlight">Assist <b>342</b></div>
+                                <div class="s-box">Jogos <b>300</b></div>
+                                <div class="s-box">MVP <b>120</b></div>
                             </div>
                         </div>
                     </div>
@@ -133,29 +122,28 @@
             </div>
         </section>
 
-        <section id="clube" class="tab-content">
-            <div class="container text-center">
-                <h2 class="title" data-aos="fade-up">O Clube</h2>
-                <p class="history-txt" data-aos="fade-up">O BSB SÓ FAR é mais que um time de Pro Clubs; é uma organização sediada em Brasília focada em lealdade e alto rendimento desde 2024. Nossa técnica é inspirada na precisão e no arrojo da nossa capital.</p>
+        <section id="clube" class="tab-page">
+            <div class="content-container center">
+                <h2 class="section-title" data-aos="fade-up">Nossa Origem</h2>
+                <p class="clube-text" data-aos="fade-up">O BSB SÓ FAR não é apenas um time de videogame. É a união de amigos da Capital Federal que decidiram levar o nome de Brasília ao topo do Pro Clubs. Nossa filosofia é simples: união, técnica e a frieza necessária para decidir campeonatos.</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - BSB SÓ FAR | Ice White Edition</p>
+        <p>&copy; 2026 BSB SÓ FAR | Brasília, Distrito Federal.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 800, once: true });
+        AOS.init({ duration: 1000, once: true });
 
-        function changeTab(event, tabId) {
-            if(event) event.preventDefault();
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.remove('active'));
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-page');
+            tabs.forEach(tab => tab.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            AOS.refresh();
             window.scrollTo(0,0);
+            AOS.refresh();
         }
     </script>
 </body>
