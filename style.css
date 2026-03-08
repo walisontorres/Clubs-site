@@ -76,6 +76,89 @@ h2 {
     padding-left: 15px;
 }
 
+/* Nova Seção de Destaque de Atleta */
+.destaque-atleta {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #333;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.destaque-atleta:hover {
+    transform: translateY(-5px);
+}
+
+.atleta-data {
+    flex: 2;
+}
+
+.atleta-data h3 {
+    color: #fff;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.atleta-data p {
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.atleta-numeros {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.atleta-numeros li {
+    background: #333;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.atleta-numeros-destaque {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 3px;
+    line-height: 1;
+}
+
+/* Destaque para gols */
+.atleta-numeros li:nth-child(2) .atleta-numeros-destaque {
+    color: #00ff00;
+}
+
+.atleta-imagem-container {
+    flex: 1;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #555;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6), 0 0 5px rgba(100, 100, 255, 0.4); /* Efeito de glow */
+}
+
+.atleta-imagem {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Sub-título da tabela */
+.container h3 {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
