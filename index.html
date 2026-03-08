@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Clube de Futebol</title>
+    <title>BSB SÓ FAR | Hall da Fama</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
@@ -14,86 +14,70 @@
             <div class="logo">BSB SÓ FAR</div>
             <ul>
                 <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#elenco">Elenco</a></li>
                 <li><a href="#estatisticas">Estatísticas</a></li>
-                <li><a href="#historia">Historia</a></li>
+                <li><a href="#historia">História</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <h1>BSB SÓ FAR</h1>
-        <p>A força de Brasília nos gramados virtuais.</p>
+        <p>A elite de Brasília no futebol virtual.</p>
     </section>
 
-    <section id="noticias" class="container">
-        <h2>Últimas Notícias</h2>
-        <div class="news-grid">
-            <div class="card">
-                <h3>O "Mago" está imparável</h3>
-                <p>Luigi (Magician) alcança a marca incrível de 358 gols pelo clube.</p>
+    <section id="elenco" class="container bg-dark-alt">
+        <h2 class="titulo-centralizado">Hall da Fama</h2>
+        
+        <div class="galeria-vertical">
+            <div class="card-atleta-v">
+                <div class="imagem-wrapper">
+                    <img src="luigi_card.png" alt="Luigi Card">
+                </div>
+                <div class="info-v">
+                    <h3>Luigi (Magician)</h3>
+                    <p class="tag">Atacante</p>
+                    <div class="grid-stats">
+                        <div class="stat-item"><span>189</span> Jogos</div>
+                        <div class="stat-item g-color"><span>358</span> Gols</div>
+                        <div class="stat-item"><span>93</span> Assist.</div>
+                        <div class="stat-item"><span>44</span> MVP</div>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Novo Reforço</h3>
-                <p>Anunciamos hoje a chegada de novos talentos para a temporada.</p>
+
+            <div class="card-atleta-v">
+                <div class="imagem-wrapper">
+                    <img src="walison_card.png" alt="Walison Card">
+                </div>
+                <div class="info-v">
+                    <h3>Walison (Insanity)</h3>
+                    <p class="tag">O Criador</p>
+                    <div class="grid-stats">
+                        <div class="stat-item"><span>300</span> Jogos</div>
+                        <div class="stat-item"><span>201</span> Gols</div>
+                        <div class="stat-item g-color"><span>342</span> Assist.</div>
+                        <div class="stat-item"><span>120</span> MVP</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-atleta-v">
+                <div class="imagem-wrapper">
+                    <img src="nicolas_card.png" alt="Nicolas Card">
+                </div>
+                <div class="info-v">
+                    <h3>Nicolas (Maestro)</h3>
+                    <p class="tag">Maestro</p>
+                    <div class="grid-stats">
+                        <div class="stat-item"><span>211</span> Jogos</div>
+                        <div class="stat-item"><span>103</span> Gols</div>
+                        <div class="stat-item"><span>97</span> Assist.</div>
+                        <div class="stat-item"><span>6</span> MVP</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="estatisticas" class="container bg-dark-alt">
-        <h2>Estatísticas dos Atletas</h2>
-
-        <div class="destaque-atleta">
-            <div class="atleta-data">
-                <h3>Luigi (Magician)</h3>
-                <p><strong>Posição:</strong> Atacante</p>
-                <p><strong>Nível:</strong> 55</p>
-                <ul class="atleta-numeros">
-                    <li><span class="atleta-numeros-destaque">189</span> Partidas</li>
-                    <li><span class="atleta-numeros-destaque">358</span> Gols</li>
-                    <li><span class="atleta-numeros-destaque">93</span> Assistências</li>
-                    <li><span class="atleta-numeros-destaque">44</span> M.v.P</li>
-                </ul>
-            </div>
-            <div class="atleta-imagem-container">
-                <img src="luigi_card.png" alt="Card do jogador Luigi" class="atleta-imagem">
-            </div>
-        </div>
-
-        <h3>Tabela Geral</h3>
-        <div style="overflow-x: auto;">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Jogador</th>
-                        <th>Posição</th>
-                        <th>Partidas</th>
-                        <th>Gols</th>
-                        <th>Assist.</th>
-                        <th>Melhor em Campo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Luigi (Magician)</strong></td>
-                        <td>Atacante</td>
-                        <td>189</td>
-                        <td style="color: #00ff00; font-weight: bold;">358</td>
-                        <td>93</td>
-                        <td>44</td>
-                    </tr>
-                    </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section id="historia" class="container">
-        <h2>Nossa História</h2>
-        <p>Fundado com o objetivo de dominar os campeonatos de videogame, o BSB SÓ FAR nasceu da união de amigos em Brasília. O nome carrega nossa identidade e o desejo de chegar longe (So Far), mantendo as raízes na capital federal.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 BSB SÓ FAR - Todos os direitos reservados.</p>
-    </footer>
-
-</body>
-</html>
+    ...
