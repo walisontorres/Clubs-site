@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Official Pro Clubs Portal</title>
+    <title>BSB SÓ FAR | Official Portal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
@@ -13,109 +13,150 @@
         <nav>
             <div class="logo">BSB<span>SÓFAR</span></div>
             <ul class="nav-links">
-                <li><a href="#noticias">News</a></li>
-                <li><a href="#elenco-portal">Elenco</a></li>
-                <li><a href="#hall-fama">Hall da Fama</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#elenco">Elenco</a></li>
+                <li><a href="#estatisticas">Estatísticas</a></li>
                 <li><a href="#historia">O Clube</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero-premium">
-        <div class="hero-content">
-            <span class="tagline">EST. 2024 • BRASÍLIA</span>
-            <h1>ELENCO<br>DE ELITE</h1>
-            <p>Conheça os guerreiros que vestem a camisa do BSB Só Far e dominam os gramados virtuais do Pro Clubs.</p>
-            <div class="hero-btns">
-                <a href="#elenco-portal" class="btn-primary">Ver Elenco Principal</a>
-                <a href="#hall-fama" class="btn-secondary">Lendas do Clube</a>
+    <section id="home" class="hero-section">
+        <div class="hero-inner">
+            <span class="badge">Pro Clubs Elite Team</span>
+            <h1>DOMINANDO<br>O CAMPO DIGITAL</h1>
+            <p>O portal oficial do BSB SÓ FAR. Acompanhe nosso elenco, estatísticas históricas e as últimas novidades da capital.</p>
+            <div class="cta-group">
+                <a href="#elenco" class="btn-main">Conhecer Atletas</a>
+                <a href="#noticias" class="btn-sub">Últimas News</a>
             </div>
         </div>
     </section>
 
-    <section id="elenco-portal" class="container bg-dark-alt">
-        <div class="section-header">
-            <span class="sub">Active Roster</span>
+    <section id="noticias" class="container">
+        <div class="header-tab">
+            <span class="tab-label">Press Release</span>
+            <h2>Notícias do Clube</h2>
+        </div>
+        <div class="news-list">
+            <article class="news-card">
+                <div class="n-date">08 MAR</div>
+                <div class="n-content">
+                    <h3>Magician: 358 Gols Marcados</h3>
+                    <p>Luigi reafirma sua posição como o maior artilheiro da história do clube após a última rodada.</p>
+                </div>
+            </article>
+            <article class="news-card">
+                <div class="n-date">05 MAR</div>
+                <div class="n-content">
+                    <h3>Walison Atinge Marca Histórica</h3>
+                    <p>Com 342 assistências, o "Insanity" se torna o maior garçom da temporada de Pro Clubs.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="elenco" class="container bg-alt">
+        <div class="header-tab">
+            <span class="tab-label">First Team</span>
             <h2>Elenco Principal</h2>
         </div>
-
-        <div class="portal-filters">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="atacantes">Atacantes</button>
-            <button class="filter-btn" data-filter="meias">Meias</button>
-            <button class="filter-btn" data-filter="defensores">Defensores</button>
-        </div>
-
-        <div class="portal-gallery">
-            <div class="portal-player-card" data-position="atacantes meias">
-                <img src="luigi_card.png" alt="Magician Player Card">
+        <div class="barca-style-grid">
+            <div class="b-player">
+                <div class="b-img"><img src="luigi_card.png" alt="Luigi"></div>
+                <div class="b-info">
+                    <span class="b-num">69</span>
+                    <div class="b-txt">
+                        <span class="b-pos">Atacante</span>
+                        <span class="b-name">LUIGI</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="portal-player-card" data-position="meias">
-                <img src="walison_card.png" alt="Insanity Specter Player Card">
+            <div class="b-player">
+                <div class="b-img"><img src="walison_card.png" alt="Walison"></div>
+                <div class="b-info">
+                    <span class="b-num">92</span>
+                    <div class="b-txt">
+                        <span class="b-pos">Meia</span>
+                        <span class="b-name">WALISON</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="portal-player-card" data-position="meias">
-                <img src="nicolas_card.png" alt="Maestro Player Card">
+            <div class="b-player">
+                <div class="b-img"><img src="nicolas_card.png" alt="Nicolas"></div>
+                <div class="b-info">
+                    <span class="b-num">10</span>
+                    <div class="b-txt">
+                        <span class="b-pos">Meia</span>
+                        <span class="b-name">NICOLAS</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="hall-fama" class="container">
-        <div class="section-header">
-            <span class="sub">Legends</span>
-            <h2>Hall da Fama</h2>
+    <section id="estatisticas" class="container">
+        <div class="header-tab">
+            <span class="tab-label">Record Books</span>
+            <h2>Estatísticas</h2>
         </div>
-        
-        <div class="galeria-vertical">
-            <div class="card-atleta-v">
-                <div class="imagem-wrapper">
-                    <img src="luigi_card.png" alt="Luigi Card">
-                </div>
-                <div class="info-v">
+        <div class="hall-grid">
+            <div class="hall-item">
+                <div class="hall-img-box"><img src="luigi_card.png" alt="Stats Luigi"></div>
+                <div class="hall-stats-box">
                     <h3>Luigi (Magician)</h3>
-                    <p class="tag-pos">Atacante</p>
-                    <div class="grid-stats">
-                        <div class="stat-item"><span>189</span> Jogos</div>
-                        <div class="stat-item g-color"><span>358</span> Gols</div>
-                        <div class="stat-item"><span>93</span> Assist.</div>
-                        <div class="stat-item"><span>44</span> MVP</div>
+                    <div class="stats-row">
+                        <div class="s-tile"><span>189</span> Jogos</div>
+                        <div class="s-tile highlight"><span>358</span> Gols</div>
+                        <div class="s-tile"><span>93</span> Assist.</div>
+                        <div class="s-tile"><span>44</span> MVP</div>
                     </div>
                 </div>
             </div>
-
-            <div class="card-atleta-v">
-                <div class="imagem-wrapper">
-                    <img src="walison_card.png" alt="Walison Card">
-                </div>
-                <div class="info-v">
+            <div class="hall-item">
+                <div class="hall-img-box"><img src="walison_card.png" alt="Stats Walison"></div>
+                <div class="hall-stats-box">
                     <h3>Walison (Insanity)</h3>
-                    <p class="tag-pos">O Criador</p>
-                    <div class="grid-stats">
-                        <div class="stat-item"><span>300</span> Jogos</div>
-                        <div class="stat-item"><span>201</span> Gols</div>
-                        <div class="stat-item g-color"><span>342</span> Assist.</div>
-                        <div class="stat-item"><span>120</span> MVP</div>
+                    <div class="stats-row">
+                        <div class="s-tile"><span>300</span> Jogos</div>
+                        <div class="s-tile"><span>201</span> Gols</div>
+                        <div class="s-tile highlight"><span>342</span> Assist.</div>
+                        <div class="s-tile"><span>120</span> MVP</div>
                     </div>
                 </div>
             </div>
-
-            <div class="card-atleta-v">
-                <div class="imagem-wrapper">
-                    <img src="nicolas_card.png" alt="Nicolas Card">
-                </div>
-                <div class="info-v">
+            <div class="hall-item">
+                <div class="hall-img-box"><img src="nicolas_card.png" alt="Stats Nicolas"></div>
+                <div class="hall-stats-box">
                     <h3>Nicolas (Maestro)</h3>
-                    <p class="tag-pos">Maestro</p>
-                    <div class="grid-stats">
-                        <div class="stat-item"><span>211</span> Jogos</div>
-                        <div class="stat-item"><span>103</span> Gols</div>
-                        <div class="stat-item"><span>97</span> Assist.</div>
-                        <div class="stat-item"><span>6</span> MVP</div>
+                    <div class="stats-row">
+                        <div class="s-tile"><span>211</span> Jogos</div>
+                        <div class="s-tile"><span>103</span> Gols</div>
+                        <div class="s-tile"><span>97</span> Assist.</div>
+                        <div class="s-tile"><span>6</span> MVP</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    ...
+    <section id="historia" class="container bg-alt">
+        <div class="history-wrapper">
+            <div class="header-tab center">
+                <span class="tab-label">The Organization</span>
+                <h2>O Clube</h2>
+            </div>
+            <p class="history-text">
+                Fundado em 2024 na Capital Federal, o <strong>BSB SÓ FAR</strong> nasceu da ambição de elevar o patamar do Pro Clubs brasileiro. Mais que um time, somos uma organização focada em alto rendimento e estratégia digital. Nossa trajetória é marcada pela técnica apurada e pela união de atletas que buscam, acima de tudo, a glória eterna nos campos virtuais.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo-footer">BSB<span>SÓFAR</span></div>
+        <p>&copy; 2026 - Official Team Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
