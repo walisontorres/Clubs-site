@@ -1,95 +1,170 @@
-/* ... Mantenha o início do CSS anterior (Reset, Body, Header, Hero) ... */
-
-.titulo-centralizado {
-    text-align: center;
-    border-left: none;
-    padding-left: 0;
-    margin-bottom: 60px;
-    font-size: 3rem;
+:root {
+    --bg-deep: #050505;
+    --bg-card: #111111;
+    --text-main: #ffffff;
+    --text-dim: #888888;
+    --accent: #00ff00; /* Neon Green dos seus cards */
 }
 
-/* Galeria Vertical */
-.galeria-vertical {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.card-atleta-v {
-    background: #151515;
-    width: 350px; /* Largura do card */
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid #333;
-    transition: 0.4s;
-}
-
-.card-atleta-v:hover {
-    transform: translateY(-15px);
-    border-color: #555;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-}
-
-.imagem-wrapper {
+/* Header Glassmorphism */
+header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    padding: 20px;
-    background: #111;
+    z-index: 1000;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 1.5rem 8%;
+}
+
+nav { display: flex; justify-content: space-between; align-items: center; }
+
+.logo {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--text-dim); font-weight: 400; }
+
+.nav-links { display: flex; list-style: none; }
+
+.nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+/* Hero Section Profissional */
+.hero-premium {
+    height: 100vh;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    padding: 0 8%;
+    background: radial-gradient(circle at 80% 20%, #1a1a1a 0%, #050505 100%);
 }
 
-.imagem-wrapper img {
-    width: 100%; /* Imagem ocupa a largura toda do container interno */
-    height: auto;
-    border-radius: 10px;
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+.tagline { color: var(--accent); font-weight: 700; font-size: 0.8rem; letter-spacing: 4px; display: block; margin-bottom: 20px; }
+
+.hero-premium h1 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+    margin-bottom: 30px;
 }
 
-.info-v {
-    padding: 25px;
-    text-align: center;
-}
+.hero-premium p { max-width: 500px; color: var(--text-dim); margin-bottom: 40px; font-size: 1.1rem; }
 
-.info-v h3 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-    color: #fff;
-}
+.hero-btns { display: flex; gap: 20px; }
 
-.tag {
-    color: #888;
+.btn-primary {
+    background: var(--text-main);
+    color: #000;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 900;
     text-transform: uppercase;
     font-size: 0.8rem;
-    letter-spacing: 2px;
-    margin-bottom: 25px;
+    transition: 0.3s;
 }
 
-/* Grid de Números embaixo da foto */
-.grid-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.stat-item {
-    background: #222;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 0.8rem;
-    color: #bbb;
-}
-
-.stat-item span {
-    display: block;
-    font-size: 1.4rem;
+.btn-secondary {
+    border: 1px solid #333;
+    color: var(--text-main);
+    padding: 15px 35px;
+    text-decoration: none;
     font-weight: 900;
-    color: #fff;
-    margin-bottom: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;
 }
 
-.g-color span {
-    color: #00ff00; /* Destaque para recordes */
+.btn-primary:hover { transform: scale(1.05); }
+
+/* News Section */
+.container { padding: 100px 8%; }
+
+.section-header { margin-bottom: 60px; }
+
+.sub { color: var(--accent); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 3px; font-weight: 900; }
+
+.news-feed { border-top: 1px solid #222; }
+
+.news-item {
+    display: flex;
+    padding: 30px 0;
+    border-bottom: 1px solid #222;
+    transition: 0.3s;
 }
 
-/* ... Restante do CSS anterior (Tabela, Footer) ... */
+.news-item:hover { background: rgba(255,255,255,0.02); padding-left: 20px; }
+
+.news-date { min-width: 120px; font-weight: 900; color: var(--text-dim); }
+
+.news-info h3 { font-size: 1.4rem; margin-bottom: 5px; }
+
+.news-info p { color: var(--text-dim); }
+
+/* Hall da Fama (Manteve a estrutura que você gostou) */
+.bg-dark-alt { background: #080808; }
+
+.galeria-vertical { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; }
+
+.card-atleta-v {
+    background: var(--bg-card);
+    width: 380px;
+    border-radius: 0px; /* Estilo mais seco/moderno */
+    border: 1px solid #222;
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-atleta-v:hover { transform: translateY(-20px); border-color: var(--accent); }
+
+.imagem-wrapper { padding: 15px; background: #000; }
+
+.imagem-wrapper img { width: 100%; border-radius: 5px; }
+
+.info-v { padding: 30px; text-align: center; }
+
+.info-v h3 { font-family: 'Syncopate', sans-serif; font-size: 1.4rem; margin-bottom: 10px; }
+
+.tag-pos { color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; font-size: 0.7rem; margin-bottom: 30px; }
+
+.grid-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.stat-item { background: #1a1a1a; padding: 15px; font-size: 0.7rem; color: var(--text-dim); }
+
+.stat-item span { display: block; font-size: 1.6rem; font-weight: 900; color: #fff; }
+
+.g-color span { color: var(--accent); }
+
+/* História Section */
+.historia-box { max-width: 800px; margin: 0 auto; text-align: center; }
+
+.historia-content p { font-size: 1.2rem; color: var(--text-dim); margin-top: 30px; }
+
+/* Footer */
+footer { padding: 80px 8%; border-top: 1px solid #222; text-align: center; }
+
+.footer-logo { font-family: 'Syncopate', sans-serif; margin-bottom: 20px; font-size: 1.5rem; }
+
+footer p { font-size: 0.7rem; color: #444; text-transform: uppercase; letter-spacing: 2px; }
