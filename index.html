@@ -3,31 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Hall da Fama</title>
+    <title>BSB SÓ FAR | Official Pro Clubs Team</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">BSB SÓ FAR</div>
-            <ul>
-                <li><a href="#noticias">Notícias</a></li>
-                <li><a href="#elenco">Elenco</a></li>
-                <li><a href="#estatisticas">Estatísticas</a></li>
-                <li><a href="#historia">História</a></li>
+            <div class="logo">BSB<span>SÓFAR</span></div>
+            <ul class="nav-links">
+                <li><a href="#noticias">News</a></li>
+                <li><a href="#elenco">Hall da Fama</a></li>
+                <li><a href="#historia">O Clube</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>BSB SÓ FAR</h1>
-        <p>A elite de Brasília no futebol virtual.</p>
+    <section class="hero-premium">
+        <div class="hero-content">
+            <span class="tagline">EST. 2024 • BRASÍLIA</span>
+            <h1>DOMINANDO O<br>CAMPO DIGITAL</h1>
+            <p>Onde a técnica encontra a glória. Conheça a lenda do BSB SÓ FAR no Pro Clubs.</p>
+            <div class="hero-btns">
+                <a href="#elenco" class="btn-primary">Ver Elenco</a>
+                <a href="#historia" class="btn-secondary">Nossa História</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="noticias" class="container">
+        <div class="section-header">
+            <span class="sub">Latest</span>
+            <h2>Notícias Recentes</h2>
+        </div>
+        <div class="news-feed">
+            <article class="news-item">
+                <div class="news-date">MAR 08</div>
+                <div class="news-info">
+                    <h3>O Mago Imparável</h3>
+                    <p>Luigi (Magician) atinge a marca histórica de 358 gols e se isola na artilharia.</p>
+                </div>
+            </article>
+            <article class="news-item">
+                <div class="news-date">MAR 05</div>
+                <div class="news-info">
+                    <h3>Mestre das Assistências</h3>
+                    <p>Walison (Insanity) quebra o recorde de passes decisivos em uma única temporada.</p>
+                </div>
+            </article>
+            <article class="news-item">
+                <div class="news-date">MAR 01</div>
+                <div class="news-info">
+                    <h3>Orquestra no Meio</h3>
+                    <p>Nicolas (Maestro) comanda a vitória no clássico com 95% de precisão nos passes.</p>
+                </div>
+            </article>
+        </div>
     </section>
 
     <section id="elenco" class="container bg-dark-alt">
-        <h2 class="titulo-centralizado">Hall da Fama</h2>
+        <div class="section-header">
+            <span class="sub">Legendary</span>
+            <h2>Hall da Fama</h2>
+        </div>
         
         <div class="galeria-vertical">
             <div class="card-atleta-v">
@@ -36,7 +75,7 @@
                 </div>
                 <div class="info-v">
                     <h3>Luigi (Magician)</h3>
-                    <p class="tag">Atacante</p>
+                    <p class="tag-pos">Atacante</p>
                     <div class="grid-stats">
                         <div class="stat-item"><span>189</span> Jogos</div>
                         <div class="stat-item g-color"><span>358</span> Gols</div>
@@ -52,7 +91,7 @@
                 </div>
                 <div class="info-v">
                     <h3>Walison (Insanity)</h3>
-                    <p class="tag">O Criador</p>
+                    <p class="tag-pos">O Criador</p>
                     <div class="grid-stats">
                         <div class="stat-item"><span>300</span> Jogos</div>
                         <div class="stat-item"><span>201</span> Gols</div>
@@ -68,7 +107,7 @@
                 </div>
                 <div class="info-v">
                     <h3>Nicolas (Maestro)</h3>
-                    <p class="tag">Maestro</p>
+                    <p class="tag-pos">Maestro</p>
                     <div class="grid-stats">
                         <div class="stat-item"><span>211</span> Jogos</div>
                         <div class="stat-item"><span>103</span> Gols</div>
@@ -80,4 +119,23 @@
         </div>
     </section>
 
-    ...
+    <section id="historia" class="container">
+        <div class="historia-box">
+            <span class="sub">Legacy</span>
+            <h2>O Legado BSB SÓ FAR</h2>
+            <div class="historia-content">
+                <p>Nascido da paixão pelo futebol virtual em Brasília, o <strong>BSB SÓ FAR</strong> transcende o simples jogo. Somos uma organização focada em alto rendimento, onde cada passe, cada gol e cada estratégia é desenhada para a vitória.</p>
+                <p>Nossa filosofia é clara: Jogar com inteligência, vencer com honra e levar o nome da capital federal ao topo do cenário mundial de Pro Clubs.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">BSB<span>SÓFAR</span></div>
+            <p>2026 © Official Team Page. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
