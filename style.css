@@ -1,113 +1,64 @@
 :root {
-    --ice: #f8fbff;
-    --blue: #0070f3;
+    --ice: #f0f4f8;
+    --blue: #0062ff;
     --black: #0a0a0a;
     --white: #ffffff;
-    --gray: #eaeaea;
+    --gray: #e1e8ed;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: var(--ice); color: var(--black); }
+body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
 
-/* Navegação */
+/* HEADER */
 header {
     position: fixed; width: 100%; z-index: 1000;
-    background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--gray); padding: 20px 8%;
 }
 nav { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: 'Syncopate', sans-serif; font-size: 1.2rem; }
+.logo { font-family: 'Syncopate', sans-serif; font-size: 1.1rem; }
 .logo span { color: var(--blue); }
 .nav-links { display: flex; list-style: none; }
-.nav-links a { margin-left: 25px; text-decoration: none; color: var(--black); font-weight: 900; font-size: 0.7rem; text-transform: uppercase; }
+.nav-links a { margin-left: 30px; text-decoration: none; color: var(--black); font-weight: 800; font-size: 0.7rem; text-transform: uppercase; transition: 0.3s; }
 .nav-links a:hover { color: var(--blue); }
 
-/* Lógica das Abas */
-.tab-content { display: none; min-height: 100vh; padding-top: 120px; animation: fadeIn 0.4s ease; }
-.tab-content.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+/* HOME / HERO */
+.hero-premium {
+    height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 8%;
+    background: radial-gradient(circle at top right, var(--ice), #ffffff);
+}
+.hero-text { max-width: 600px; }
+.ice-tag { color: var(--blue); font-weight: 900; letter-spacing: 4px; font-size: 0.7rem; }
+.hero-text h1 { font-family: 'Syncopate', sans-serif; font-size: 4rem; line-height: 1; margin: 20px 0; }
+.hero-text p { font-size: 1.1rem; color: #444; margin-bottom: 40px; line-height: 1.6; }
+.hero-btns { display: flex; gap: 20px; }
 
-/* Hero / Home */
-.hero { height: 70vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; }
-.hero h1 { font-family: 'Syncopate', sans-serif; font-size: 4rem; line-height: 1; margin: 20px 0; }
-.tag { color: var(--blue); font-weight: 900; letter-spacing: 3px; font-size: 0.8rem; }
-.btn-primary { background: var(--black); color: white; border: none; padding: 15px 35px; font-weight: 900; cursor: pointer; text-transform: uppercase; width: fit-content; }
+/* BOTÕES */
+.btn-primary { background: var(--black); color: white; padding: 18px 35px; border: none; font-weight: 900; text-transform: uppercase; cursor: pointer; transition: 0.4s; }
+.btn-secondary { background: transparent; border: 2px solid var(--gray); padding: 18px 35px; font-weight: 900; text-transform: uppercase; cursor: pointer; transition: 0.4s; }
+.btn-primary:hover { background: var(--blue); transform: translateY(-5px); }
 
-/* Elenco */
-.container { padding: 40px 8%; }
-.title { font-family: 'Syncopate', sans-serif; font-size: 2rem; margin-bottom: 40px; border-left: 5px solid var(--blue); padding-left: 20px; }
-.elenco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-.barca-card { background: white; border-radius: 10px; overflow: hidden; border: 1px solid var(--gray); transition: 0.3s; }
-.barca-card:hover { transform: translateY(-10px); border-color: var(--blue); }
-.barca-card img { width: 100%; }
-.barca-info { background: var(--black); color: white; padding: 20px; display: flex; align-items: center; gap: 15px; }
-.b-num { font-size: 2rem; font-weight: 900; }
-.b-name span { display: block; font-size: 0.6rem; color: var(--blue); font-weight: 900; }
-.b-name { font-weight: 700; font-size: 1rem; }
+/* ESTATÍSTICAS */
+.container { padding: 100px 8%; }
+.title { font-family: 'Syncopate', sans-serif; font-size: 2.5rem; margin-bottom: 10px; }
+.subtitle { color: #888; margin-bottom: 60px; font-weight: 500; }
 
-/* Estatísticas Premium */
-.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-.stat-premium { background: white; border: 1px solid var(--gray); border-radius: 15px; display: flex; overflow: hidden; align-items: center; }
-.stat-photo { width: 150px; background: #000; height: 100%; display: flex; align-items: center; }
-.stat-photo img { width: 100%; }
-.stat-data { padding: 25px; flex: 1; }
-.stat-data h3 { font-size: 1rem; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-.data-box { font-size: 0.7rem; font-weight: 900; color: #888; text-transform: uppercase; margin-bottom: 8px; }
-.data-box span { color: var(--black); font-size: 1.2rem; margin-left: 5px; }
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+.stat-premium { background: var(--white); border: 1px solid var(--gray); border-radius: 20px; display: flex; overflow: hidden; transition: 0.4s; }
+.stat-premium:hover { border-color: var(--blue); transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+
+.stat-photo { width: 160px; background: #000; display: flex; align-items: center; overflow: hidden; }
+.stat-photo img { width: 100%; transition: 0.5s; }
+.stat-premium:hover .stat-photo img { transform: scale(1.1); }
+
+.stat-data { padding: 30px; flex: 1; }
+.stat-data h3 { font-family: 'Syncopate', sans-serif; font-size: 1rem; margin-bottom: 20px; color: var(--black); }
+.data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.data-box { background: var(--ice); padding: 15px; border-radius: 10px; font-size: 0.6rem; font-weight: 900; text-transform: uppercase; color: #777; }
+.data-box span { display: block; font-size: 1.4rem; color: var(--black); margin-top: 5px; }
 .data-box.blue span { color: var(--blue); }
 
-/* Notícias & Clube */
-.news-item { background: white; padding: 30px; border-left: 4px solid var(--blue); margin-bottom: 20px; }
-.date { color: var(--blue); font-weight: 900; font-size: 0.8rem; }
-.center { text-align: center; }
-.history { font-size: 1.5rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.8; }
-/* Transição suave para troca de abas */
-.tab-content {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.tab-content.active {
-    opacity: 1;
-}
-
-/* Efeito de Brilho Ice Blue nos cards ao passar o mouse */
-.barca-card:hover, .stat-premium:hover {
-    box-shadow: 0 10px 30px rgba(0, 112, 243, 0.2);
-    border-color: var(--blue);
-    transform: translateY(-8px);
-}
-
-/* Animação suave no menu */
-.nav-links a {
-    position: relative;
-    transition: 0.3s;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--blue);
-    transition: 0.3s;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* Estilização do Botão Principal */
-.btn-primary {
-    transition: 0.4s;
-    border: 2px solid transparent;
-}
-
-.btn-primary:hover {
-    background: transparent;
-    color: var(--black);
-    border-color: var(--black);
-    letter-spacing: 2px;
-}
+/* ABA LOGIC */
+.tab-content { display: none; min-height: 100vh; }
+.tab-content.active { display: block; animation: fadeIn 0.6s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
