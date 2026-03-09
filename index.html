@@ -119,4 +119,75 @@
 
         <section id="trofeus" class="tab-pane">
             <div class="container">
-                <h2 class="page-title">Sala
+                <h2 class="page-title">Sala de Troféus</h2>
+                <p style="text-align: center; color: #94a3b8; margin-bottom: 50px; font-size: 1rem;">Grandes conquistas de uma equipe que comemora lateral no campo de ataque.</p>
+                
+                <div class="trophy-grid">
+                    <div class="trophy-card">
+                        <div class="trophy-icon">🏆</div>
+                        <h3>Acesso Divisão de Elite</h3>
+                        <p>Subimos de divisão porque a conexão do time adversário caiu aos 89 minutos.</p>
+                        <span class="ice-badge">HISTÓRICO</span>
+                    </div>
+                    <div class="trophy-card">
+                        <div class="trophy-icon">🥈</div>
+                        <h3>Vice do Torneio de Terça</h3>
+                        <p>Chegamos na final por W.O. e perdemos o jogo do título de 5 a 0.</p>
+                        <span class="ice-badge">QUASE LÁ</span>
+                    </div>
+                    <div class="trophy-card">
+                        <div class="trophy-icon">🛡️</div>
+                        <h3>Prêmio Sobrevivência</h3>
+                        <p>Jogamos 10 partidas seguidas no meio-campo sem quebrar nenhum controle.</p>
+                        <span class="ice-badge">FAIR PLAY</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clube" class="tab-pane">
+            <div class="container">
+                <h2 class="page-title">Dossiê BSB Sófar</h2>
+                <div class="dossie-grid">
+                    <div class="dossie-box">
+                        <h3>Tática "Eixo Monumental"</h3>
+                        <p>Inspirada no urbanismo de Brasília: parece linda no papel, mas se você errar uma tesourinha, vai demorar 20 minutos pra dar a volta.</p>
+                        <ul>
+                            <li><strong>Contra-Ataque Lento:</strong> Transição tão devagar que o zagueiro rival casa e tem filhos antes da bola chegar.</li>
+                            <li><strong>Marcação Céu:</strong> Espaço tão aberto que dá pra ver o horizonte.</li>
+                        </ul>
+                    </div>
+                    <div class="dossie-box">
+                        <h3>🤡 Qualidade "Licitação"</h3>
+                        <p>Se o critério fosse habilidade, teríamos dois jogadores e um cone. Como é amizade, temos o seguinte:</p>
+                        <ul>
+                            <li><strong>Atacantes "Fome Zero":</strong> Alergia severa ao botão de passe. Só enxergam a rede.</li>
+                            <li><strong>Meio-Campo "Tesouro":</strong> Agilidade de um monumento e passe de estagiário.</li>
+                            <li><strong>Zaga "Drywall":</strong> Parece sólida de longe, mas um sopro a esfarela.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>BSB_SOFAR // 2026 // ARCTIC_PROTOCOL</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabId) {
+            evt.preventDefault();
+            var i, tabs;
+            tabs = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(tabId).style.display = "block";
+            document.getElementById(tabId).classList.add("active");
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
