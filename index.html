@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Official Dark Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>BSB SÓ FAR | Cyber-Ice Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <nav>
-            <div class="logo">BSB<span>SÓFAR</span></div>
+        <nav class="nav-container">
+            <div class="logo">BSB<span class="ice">SÓFAR</span></div>
             <ul class="nav-links">
-                <li><a href="#" onclick="openTab(event, 'home')">Início</a></li>
-                <li><a href="#" onclick="openTab(event, 'noticias')">Notícias</a></li>
-                <li><a href="#" onclick="openTab(event, 'elenco')">Elenco</a></li>
-                <li><a href="#" onclick="openTab(event, 'stats')">Stats</a></li>
-                <li><a href="#" onclick="openTab(event, 'clube')">O Clube</a></li>
+                <li><a href="javascript:void(0)" onclick="openTab('home')">Início</a></li>
+                <li><a href="javascript:void(0)" onclick="openTab('noticias')">Notícias</a></li>
+                <li><a href="javascript:void(0)" onclick="openTab('elenco')">Elenco</a></li>
+                <li><a href="javascript:void(0)" onclick="openTab('stats')">Stats</a></li>
+                <li><a href="javascript:void(0)" onclick="openTab('clube')">O Clube</a></li>
             </ul>
         </nav>
     </header>
@@ -25,18 +25,18 @@
     <main>
         <section id="home" class="tab-pane active">
             <div class="hero">
-                <div class="hero-container">
-                    <div class="hero-text">
-                        <span class="neon-tag">BRASÍLIA • CAPITAL DO PRO CLUBS</span>
-                        <h1>GELO NO <span class="blue-neon">SANGUE.</span><br>PLANALTO NO <span class="blue-neon">CORAÇÃO.</span></h1>
-                        <p>Nascido entre os traços monumentais de Brasília, o <strong>BSB SÓ FAR</strong> representa a elite (da resenha) do futebol virtual. Unimos a frieza tática à precisão monumental para dominar os gramados.</p>
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <span class="system-tag">SYSTEM STATUS: OPERATIONAL</span>
+                        <h1>GELO NO <span class="ice">SANGUE.</span><br>PLANALTO NO <span class="ice">CORAÇÃO.</span></h1>
+                        <p>A força monumental de Brasília nos gramados virtuais. Onde o "Tiki-Taka de Tartaruga" encontra a frieza do Planalto Central.</p>
                         <div class="hero-btns">
-                            <button class="btn-main" onclick="openTab(event, 'clube')">Ler Dossiê</button>
-                            <button class="btn-outline" onclick="openTab(event, 'elenco')">Ver Elenco</button>
+                            <button class="btn-cyan" onclick="openTab('stats')">VER PERFORMANCE</button>
+                            <button class="btn-ghost" onclick="openTab('clube')">LER DOSSIÊ</button>
                         </div>
                     </div>
                     <div class="hero-visual">
-                        <img src="nicolas_card.png" alt="Destaque" class="floating">
+                        <img src="nicolas_card.png" alt="Destaque Maestro" class="floating">
                     </div>
                 </div>
             </div>
@@ -44,37 +44,37 @@
 
         <section id="noticias" class="tab-pane">
             <div class="container">
-                <h2 class="section-title">Boletim de Ocorrência</h2>
-                <div class="news-list">
-                    <article class="news-card">
-                        <span class="blue-neon">08 MAR 2026</span>
-                        <h3>Magician: 358 Gols Históricos</h3>
-                        <p>Luigi reafirma sua posição como o único que realmente sabe onde fica o gol.</p>
-                    </article>
-                    <article class="news-card">
-                        <span class="blue-neon">05 MAR 2026</span>
-                        <h3>O Rei das Assistências</h3>
-                        <p>Walison (Insanity) atinge 342 passes decisivos na temporada.</p>
-                    </article>
+                <h2 class="page-title">Boletim de Transmissão</h2>
+                <div class="news-grid">
+                    <div class="news-item">
+                        <span class="ice">08.03.2026</span>
+                        <h3>Magician: 358 Gols Registrados</h3>
+                        <p>Luigi segue ignorando as leis da física e liderando a artilharia histórica.</p>
+                    </div>
+                    <div class="news-item">
+                        <span class="ice">05.03.2026</span>
+                        <h3>Protocolo de Assistências</h3>
+                        <p>Walison atinge 342 passes decisivos. O garçom de Brasília não descansa.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="elenco" class="tab-pane">
             <div class="container">
-                <h2 class="section-title">Elenco Principal</h2>
-                <div class="grid-elenco">
-                    <div class="card-barca">
+                <h2 class="page-title">Unidades de Campo</h2>
+                <div class="squad-grid">
+                    <div class="squad-card">
                         <img src="luigi_card.png">
-                        <div class="barca-footer"><span class="b-num">69</span><div class="b-txt"><span>Atacante</span>LUIGI</div></div>
+                        <div class="card-label"><span>69</span> LUIGI</div>
                     </div>
-                    <div class="card-barca">
+                    <div class="squad-card">
                         <img src="walison_card.png">
-                        <div class="barca-footer"><span class="b-num">92</span><div class="b-txt"><span>Meia</span>WALISON</div></div>
+                        <div class="card-label"><span>92</span> WALISON</div>
                     </div>
-                    <div class="card-barca">
+                    <div class="squad-card">
                         <img src="nicolas_card.png">
-                        <div class="barca-footer"><span class="b-num">10</span><div class="b-txt"><span>Meia</span>NICOLAS</div></div>
+                        <div class="card-label"><span>10</span> NICOLAS</div>
                     </div>
                 </div>
             </div>
@@ -82,27 +82,38 @@
 
         <section id="stats" class="tab-pane">
             <div class="container">
-                <h2 class="section-title">Hall da Fama</h2>
+                <h2 class="page-title">Relatório de Performance</h2>
                 <div class="stats-grid">
-                    <div class="s-card">
-                        <div class="s-img"><img src="nicolas_card.png"></div>
-                        <div class="s-info">
-                            <h3>NICOLAS (Maestro)</h3>
-                            <div class="s-data">
-                                <div class="box neon-box">Gols <span>103</span></div>
-                                <div class="box neon-box">Assist <span>97</span></div>
-                                <div class="box">Jogos <span>211</span></div>
+                    <div class="stat-module">
+                        <div class="mod-img"><img src="nicolas_card.png"></div>
+                        <div class="mod-data">
+                            <h3>NICOLAS <small>(Maestro)</small></h3>
+                            <div class="data-row">
+                                <div class="data-point"><small>GOLS</small> 103</div>
+                                <div class="data-point"><small>ASSIST</small> 97</div>
+                                <div class="data-point full"><small>PARTIDAS</small> 211</div>
                             </div>
                         </div>
                     </div>
-                    <div class="s-card">
-                        <div class="s-img"><img src="luigi_card.png"></div>
-                        <div class="s-info">
-                            <h3>LUIGI (Magician)</h3>
-                            <div class="s-data">
-                                <div class="box neon-box">Gols <span>358</span></div>
-                                <div class="box">MVP <span>44</span></div>
-                                <div class="box">Jogos <span>189</span></div>
+                    <div class="stat-module">
+                        <div class="mod-img"><img src="luigi_card.png"></div>
+                        <div class="mod-data">
+                            <h3>LUIGI <small>(Magician)</small></h3>
+                            <div class="data-row">
+                                <div class="data-point ice-box"><small>GOLS</small> 358</div>
+                                <div class="data-point"><small>MVP</small> 44</div>
+                                <div class="data-point"><small>JOGOS</small> 189</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stat-module">
+                        <div class="mod-img"><img src="walison_card.png"></div>
+                        <div class="mod-data">
+                            <h3>WALISON <small>(Insanity)</small></h3>
+                            <div class="data-row">
+                                <div class="data-point ice-box"><small>ASSIST</small> 342</div>
+                                <div class="data-point"><small>GOLS</small> 201</div>
+                                <div class="data-point"><small>JOGOS</small> 300</div>
                             </div>
                         </div>
                     </div>
@@ -112,24 +123,22 @@
 
         <section id="clube" class="tab-pane">
             <div class="container">
-                <h2 class="section-title">Dossiê BSB Sófar</h2>
-                <div class="clube-grid">
-                    <div class="clube-card">
-                        <h3>A Tática "Eixo Monumental"</h3>
-                        <p><strong>(Tudo Reto e Nada Curva)</strong></p>
-                        <p>Inspirada no urbanismo de Brasília: parece linda no papel, mas se você errar uma tesourinha, vai parar no lugar errado e demorar 20 minutos pra dar a volta.</p>
+                <h2 class="page-title">O Dossiê BSB Sófar</h2>
+                <div class="dossie-grid">
+                    <div class="dossie-box">
+                        <h3>Tática "Eixo Monumental"</h3>
+                        <p>Estratégia inspirada no urbanismo de Brasília: linda no papel, mas um erro na tesourinha e você demora 20 minutos pra voltar.</p>
                         <ul>
-                            <li><strong>Contra-Ataque "Lento mas Severo":</strong> Transição tão vagarosa que dá tempo do zagueiro adversário casar e ter dois filhos antes da bola chegar.</li>
-                            <li><strong>Marcação "Céu de Brasília":</strong> Um espaço tão aberto que dá pra ver o horizonte. O adversário passa porque ficou desorientado.</li>
+                            <li><strong>Contra-Ataque Lento:</strong> Transição tão devagar que o zagueiro rival casa e tem filhos antes da bola chegar.</li>
+                            <li><strong>Marcação Céu:</strong> Espaço tão aberto que dá pra ver o horizonte.</li>
                         </ul>
                     </div>
-                    <div class="clube-card">
-                        <h3>🤡 Qualidade "Padrão Licitação"</h3>
-                        <p>Como o critério é amizade e disponibilidade numa terça-feira à noite, temos o seguinte relatório técnico:</p>
+                    <div class="dossie-box">
+                        <h3>Qualidade "Licitação"</h3>
+                        <p>Se o critério fosse habilidade, teríamos dois jogadores e um cone. Mas como é amizade:</p>
                         <ul>
-                            <li><strong>Atacantes "Fome Zero":</strong> Alergia severa ao botão de passe. Só enxergam a rede e geralmente acertam a bandeirinha de escanteio.</li>
-                            <li><strong>Meio-Campo "Tesouro Nacional":</strong> O MEI tem a agilidade de um monumento de concreto e o passe final de um estagiário em primeiro dia de órgão público.</li>
-                            <li><strong>Zaga "Parede de Drywall":</strong> Parece sólida de longe, mas se o atacante der um sopro, ela esfarela. Destaque para o Bot (IA).</li>
+                            <li><strong>Atacantes Fome Zero:</strong> Alergia severa ao botão de passe.</li>
+                            <li><strong>Zaga Drywall:</strong> Parece sólida, mas um sopro a esfarela.</li>
                         </ul>
                     </div>
                 </div>
@@ -138,18 +147,19 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 - BSB SÓ FAR | Official Dark Portal</p>
+        <p>TERMINAL BSB_SOFAR // 2026 // CYBER_ARCTIC</p>
     </footer>
 
     <script>
-        function openTab(e, id) {
-            if(e) e.preventDefault();
-            var i, panes;
-            panes = document.getElementsByClassName("tab-pane");
-            for (i = 0; i < panes.length; i++) {
-                panes[i].style.display = "none";
+        function openTab(id) {
+            var i, tabs;
+            tabs = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = "none";
+                tabs[i].classList.remove("active");
             }
             document.getElementById(id).style.display = "block";
+            document.getElementById(id).classList.add("active");
             window.scrollTo(0, 0);
         }
     </script>
