@@ -25,8 +25,9 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .active { display: block; animation: fadeIn 0.4s ease-out; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Hero (Corrigido Alinhamento) */
-.hero { min-height: 80vh; display: flex; align-items: center; padding: 40px 8%; flex-wrap: wrap; text-align: left; }
+/* Hero Section Corrigida */
+.hero { min-height: 80vh; display: flex; align-items: center; padding: 40px 8%; flex-wrap: wrap; }
+.hero-container { display: flex; align-items: center; justify-content: space-between; width: 100%; flex-wrap: wrap; }
 .hero-content { flex: 1; min-width: 300px; }
 .neon-tag { color: var(--neon); font-weight: 900; letter-spacing: 3px; font-size: 0.7rem; }
 .hero h1 { font-family: 'Syncopate', sans-serif; font-size: clamp(1.8rem, 7vw, 3.2rem); margin: 20px 0; line-height: 1.1; }
@@ -37,7 +38,7 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .btn-outline { background: transparent; border: 1px solid #fff; color: #fff; padding: 14px 25px; font-weight: 900; text-transform: uppercase; cursor: pointer; font-size: 0.7rem; }
 
 .hero-visual { flex: 1; display: flex; justify-content: center; min-width: 300px; margin-top: 30px; }
-.hero-visual img { width: 100%; max-width: 320px; filter: drop-shadow(0 0 30px rgba(0,212,255,0.1)); animation: float 6s infinite ease-in-out; }
+.hero-visual img { width: 100%; max-width: 320px; animation: float 6s infinite ease-in-out; filter: drop-shadow(0 0 20px rgba(0,212,255,0.1)); }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
 /* Elenco */
@@ -45,13 +46,13 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .section-title { font-family: 'Syncopate', sans-serif; font-size: 1.5rem; margin-bottom: 30px; border-left: 4px solid var(--neon); padding-left: 15px; }
 .grid-elenco { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
 .card-barca { background: #111; border-radius: 10px; overflow: hidden; border: 1px solid #222; }
-.card-barca img { width: 100%; display: block; object-fit: cover; }
+.card-barca img { width: 100%; display: block; }
 .barca-footer { background: #000; padding: 20px; display: flex; align-items: center; gap: 15px; }
 .b-num { font-family: 'Syncopate', sans-serif; font-size: 1.8rem; color: var(--neon); }
 .b-txt span { display: block; font-size: 0.55rem; color: #555; text-transform: uppercase; font-weight: 900; }
 .b-txt { font-family: 'Syncopate', sans-serif; font-size: 0.85rem; }
 
-/* Stats Premium */
+/* Stats */
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
 .s-card { background: var(--card); border: 1px solid #222; border-radius: 12px; display: flex; overflow: hidden; }
 .s-img { width: 120px; background: #000; display: flex; align-items: center; }
@@ -63,24 +64,20 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .box span { display: block; font-size: 1.1rem; color: #fff; margin-top: 3px; }
 .neon-box span { color: var(--neon); }
 
-/* Clube (Cards de Resenha) */
+/* Clube */
 .clube-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
 .clube-card { background: var(--card); padding: 30px; border-radius: 15px; border: 1px solid #222; }
 .clube-card h3 { color: var(--neon); font-family: 'Syncopate', sans-serif; font-size: 0.85rem; margin-bottom: 15px; }
-.clube-card p { font-size: 0.85rem; line-height: 1.6; margin-bottom: 15px; color: #ddd; }
-.clube-card ul { list-style: none; }
-.clube-card li { font-size: 0.8rem; color: #888; margin-bottom: 12px; padding-left: 10px; border-left: 2px solid var(--neon); }
+.clube-card p { font-size: 0.85rem; line-height: 1.6; margin-bottom: 15px; }
+.clube-card li { font-size: 0.8rem; color: #888; margin-bottom: 12px; padding-left: 10px; border-left: 2px solid var(--neon); list-style: none; }
 .clube-card li strong { color: #fff; display: block; margin-bottom: 3px; }
 
-/* Footer */
-footer { padding: 40px; text-align: center; border-top: 1px solid #222; font-size: 0.55rem; color: #444; text-transform: uppercase; letter-spacing: 1px; }
+footer { padding: 40px; text-align: center; border-top: 1px solid #222; font-size: 0.55rem; color: #444; text-transform: uppercase; }
 
-/* Ajustes Mobile Finos */
 @media (max-width: 768px) {
-    .hero { flex-direction: column; text-align: center; padding-top: 60px; }
+    .hero { flex-direction: column; text-align: center; }
     .hero-content { margin-bottom: 30px; }
     .hero-btns { justify-content: center; }
-    .hero p { margin: 0 auto 30px; }
     .s-card { flex-direction: column; }
     .s-img { width: 100%; height: 200px; }
 }
