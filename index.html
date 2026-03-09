@@ -13,11 +13,11 @@
         <nav>
             <div class="logo">BSB<span>SÓFAR</span></div>
             <ul class="nav-links">
-                <li><a href="javascript:void(0)" onclick="openTab('home')">Início</a></li>
-                <li><a href="javascript:void(0)" onclick="openTab('noticias')">Notícias</a></li>
-                <li><a href="javascript:void(0)" onclick="openTab('elenco')">Elenco</a></li>
-                <li><a href="javascript:void(0)" onclick="openTab('stats')">Stats</a></li>
-                <li><a href="javascript:void(0)" onclick="openTab('clube')">O Clube</a></li>
+                <li><a href="#" onclick="openTab(event, 'home')">Início</a></li>
+                <li><a href="#" onclick="openTab(event, 'noticias')">Notícias</a></li>
+                <li><a href="#" onclick="openTab(event, 'elenco')">Elenco</a></li>
+                <li><a href="#" onclick="openTab(event, 'stats')">Stats</a></li>
+                <li><a href="#" onclick="openTab(event, 'clube')">O Clube</a></li>
             </ul>
         </nav>
     </header>
@@ -27,12 +27,12 @@
             <div class="hero">
                 <div class="hero-container">
                     <div class="hero-text">
-                        <span class="tag">Brasília • 100% Cones</span>
-                        <h1>GELO NO <span class="neon">SANGUE.</span><br>LIMITAÇÃO NO <span class="neon">CONTROLE.</span></h1>
-                        <p>O <strong>BSB SÓ FAR</strong> é a prova de que Brasília tem monumentos lindos, mas o nosso futebol é puro concreto: duro de assistir e difícil de mover. Unimos o pior do lag com o melhor da amizade de terça à noite.</p>
+                        <span class="neon-tag">BRASÍLIA • CAPITAL DO PRO CLUBS</span>
+                        <h1>GELO NO <span class="blue-neon">SANGUE.</span><br>PLANALTO NO <span class="blue-neon">CORAÇÃO.</span></h1>
+                        <p>Nascido entre os traços monumentais de Brasília, o <strong>BSB SÓ FAR</strong> representa a elite (da resenha) do futebol virtual. Unimos a frieza tática à precisão monumental para dominar os gramados.</p>
                         <div class="hero-btns">
-                            <button class="btn-main" onclick="openTab('clube')">Dossiê do Time</button>
-                            <button class="btn-outline" onclick="openTab('elenco')">Ver os Cones</button>
+                            <button class="btn-main" onclick="openTab(event, 'clube')">Ler Dossiê</button>
+                            <button class="btn-outline" onclick="openTab(event, 'elenco')">Ver Elenco</button>
                         </div>
                     </div>
                     <div class="hero-visual">
@@ -47,14 +47,14 @@
                 <h2 class="section-title">Boletim de Ocorrência</h2>
                 <div class="news-list">
                     <article class="news-card">
-                        <span class="neon">08 MAR 2026</span>
-                        <h3>Magician: 358 Gols</h3>
-                        <p>Luigi segue carregando o time nas costas enquanto o resto tenta entender qual botão corre.</p>
+                        <span class="blue-neon">08 MAR 2026</span>
+                        <h3>Magician: 358 Gols Históricos</h3>
+                        <p>Luigi reafirma sua posição como o único que realmente sabe onde fica o gol.</p>
                     </article>
                     <article class="news-card">
-                        <span class="neon">05 MAR 2026</span>
-                        <h3>Walison: 342 Assistências</h3>
-                        <p>O "Insanity" insiste em passar a bola, mesmo sabendo que a chance de gol é nula.</p>
+                        <span class="blue-neon">05 MAR 2026</span>
+                        <h3>O Rei das Assistências</h3>
+                        <p>Walison (Insanity) atinge 342 passes decisivos na temporada.</p>
                     </article>
                 </div>
             </div>
@@ -62,7 +62,7 @@
 
         <section id="elenco" class="tab-pane">
             <div class="container">
-                <h2 class="section-title">Vítimas da Terça-Feira</h2>
+                <h2 class="section-title">Elenco Principal</h2>
                 <div class="grid-elenco">
                     <div class="card-barca">
                         <img src="luigi_card.png">
@@ -74,7 +74,7 @@
                     </div>
                     <div class="card-barca">
                         <img src="nicolas_card.png">
-                        <div class="barca-footer"><span class="b-num">10</span><div class="b-txt"><span>Maestro</span>NICOLAS</div></div>
+                        <div class="barca-footer"><span class="b-num">10</span><div class="b-txt"><span>Meia</span>NICOLAS</div></div>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
 
         <section id="stats" class="tab-pane">
             <div class="container">
-                <h2 class="section-title">Números que Mentem</h2>
+                <h2 class="section-title">Hall da Fama</h2>
                 <div class="stats-grid">
                     <div class="s-card">
                         <div class="s-img"><img src="nicolas_card.png"></div>
@@ -112,12 +112,12 @@
 
         <section id="clube" class="tab-pane">
             <div class="container">
-                <h2 class="section-title">O Clube</h2>
+                <h2 class="section-title">Dossiê BSB Sófar</h2>
                 <div class="clube-grid">
                     <div class="clube-card">
                         <h3>A Tática "Eixo Monumental"</h3>
                         <p><strong>(Tudo Reto e Nada Curva)</strong></p>
-                        <p>A estratégia é inspirada no urbanismo de Brasília: parece linda no papel, mas se você errar uma tesourinha, vai parar no lugar errado e demorar 20 minutos pra dar a volta.</p>
+                        <p>Inspirada no urbanismo de Brasília: parece linda no papel, mas se você errar uma tesourinha, vai parar no lugar errado e demorar 20 minutos pra dar a volta.</p>
                         <ul>
                             <li><strong>Contra-Ataque "Lento mas Severo":</strong> Transição tão vagarosa que dá tempo do zagueiro adversário casar e ter dois filhos antes da bola chegar.</li>
                             <li><strong>Marcação "Céu de Brasília":</strong> Um espaço tão aberto que dá pra ver o horizonte. O adversário passa porque ficou desorientado.</li>
@@ -125,10 +125,10 @@
                     </div>
                     <div class="clube-card">
                         <h3>🤡 Qualidade "Padrão Licitação"</h3>
-                        <p>Se o critério fosse habilidade, teríamos dois jogadores e um cone. Como é amizade, temos o seguinte:</p>
+                        <p>Como o critério é amizade e disponibilidade numa terça-feira à noite, temos o seguinte relatório técnico:</p>
                         <ul>
                             <li><strong>Atacantes "Fome Zero":</strong> Alergia severa ao botão de passe. Só enxergam a rede e geralmente acertam a bandeirinha de escanteio.</li>
-                            <li><strong>Meio-Campo "Tesouro Nacional":</strong> MEI com agilidade de um monumento de concreto e passe de estagiário em primeiro dia.</li>
+                            <li><strong>Meio-Campo "Tesouro Nacional":</strong> O MEI tem a agilidade de um monumento de concreto e o passe final de um estagiário em primeiro dia de órgão público.</li>
                             <li><strong>Zaga "Parede de Drywall":</strong> Parece sólida de longe, mas se o atacante der um sopro, ela esfarela. Destaque para o Bot (IA).</li>
                         </ul>
                     </div>
@@ -142,15 +142,14 @@
     </footer>
 
     <script>
-        function openTab(id) {
+        function openTab(e, id) {
+            if(e) e.preventDefault();
             var i, panes;
             panes = document.getElementsByClassName("tab-pane");
             for (i = 0; i < panes.length; i++) {
                 panes[i].style.display = "none";
-                panes[i].classList.remove("active");
             }
             document.getElementById(id).style.display = "block";
-            document.getElementById(id).classList.add("active");
             window.scrollTo(0, 0);
         }
     </script>
