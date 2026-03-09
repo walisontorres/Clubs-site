@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Official Portal</title>
+    <title>BSB SÓ FAR | Official Dark Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,17 +25,19 @@
     <main>
         <section id="home" class="tab-pane active">
             <div class="hero">
-                <div class="hero-content">
-                    <span class="neon-tag">BRASÍLIA • 100% CONES</span>
-                    <h1>GELO NO <span class="neon">SANGUE.</span><br>LIMITAÇÃO NO <span class="neon">CONTROLE.</span></h1>
-                    <p>O BSB SÓ FAR é a prova viva de que Brasília tem monumentos lindos, mas o nosso futebol é puro concreto: <strong>duro de assistir e difícil de mover.</strong> Unimos o pior do lag com o melhor da amizade de terça à noite.</p>
-                    <div class="hero-btns">
-                        <button class="btn-main" onclick="openTab('clube')">Dossiê Técnico</button>
-                        <button class="btn-outline" onclick="openTab('elenco')">Ver os "Atletas"</button>
+                <div class="hero-container">
+                    <div class="hero-text">
+                        <span class="tag">Brasília • 100% Cones</span>
+                        <h1>GELO NO <span class="neon">SANGUE.</span><br>LIMITAÇÃO NO <span class="neon">CONTROLE.</span></h1>
+                        <p>O <strong>BSB SÓ FAR</strong> é a prova de que Brasília tem monumentos lindos, mas o nosso futebol é puro concreto: duro de assistir e difícil de mover. Unimos o pior do lag com o melhor da amizade de terça à noite.</p>
+                        <div class="hero-btns">
+                            <button class="btn-main" onclick="openTab('clube')">Dossiê do Time</button>
+                            <button class="btn-outline" onclick="openTab('elenco')">Ver os Cones</button>
+                        </div>
                     </div>
-                </div>
-                <div class="hero-visual">
-                    <img src="nicolas_card.png" alt="Destaque" class="floating">
+                    <div class="hero-visual">
+                        <img src="nicolas_card.png" alt="Destaque" class="floating">
+                    </div>
                 </div>
             </div>
         </section>
@@ -43,15 +45,17 @@
         <section id="noticias" class="tab-pane">
             <div class="container">
                 <h2 class="section-title">Boletim de Ocorrência</h2>
-                <div class="news-card">
-                    <span class="neon">08 MAR 2026</span>
-                    <h3>Magician: 358 Gols</h3>
-                    <p>Luigi segue carregando o time nas costas enquanto o resto tenta entender qual botão corre.</p>
-                </div>
-                <div class="news-card">
-                    <span class="neon">05 MAR 2026</span>
-                    <h3>Walison: 342 Assistências</h3>
-                    <p>O "Insanity" insiste em passar a bola, mesmo sabendo que a chance de gol é nula.</p>
+                <div class="news-list">
+                    <article class="news-card">
+                        <span class="neon">08 MAR 2026</span>
+                        <h3>Magician: 358 Gols</h3>
+                        <p>Luigi segue carregando o time nas costas enquanto o resto tenta entender qual botão corre.</p>
+                    </article>
+                    <article class="news-card">
+                        <span class="neon">05 MAR 2026</span>
+                        <h3>Walison: 342 Assistências</h3>
+                        <p>O "Insanity" insiste em passar a bola, mesmo sabendo que a chance de gol é nula.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -62,11 +66,11 @@
                 <div class="grid-elenco">
                     <div class="card-barca">
                         <img src="luigi_card.png">
-                        <div class="barca-footer"><span class="b-num">69</span><div class="b-txt"><span>Artilheiro</span>LUIGI</div></div>
+                        <div class="barca-footer"><span class="b-num">69</span><div class="b-txt"><span>Atacante</span>LUIGI</div></div>
                     </div>
                     <div class="card-barca">
                         <img src="walison_card.png">
-                        <div class="barca-footer"><span class="b-num">92</span><div class="b-txt"><span>Garçom</span>WALISON</div></div>
+                        <div class="barca-footer"><span class="b-num">92</span><div class="b-txt"><span>Meia</span>WALISON</div></div>
                     </div>
                     <div class="card-barca">
                         <img src="nicolas_card.png">
@@ -113,10 +117,10 @@
                     <div class="clube-card">
                         <h3>A Tática "Eixo Monumental"</h3>
                         <p><strong>(Tudo Reto e Nada Curva)</strong></p>
-                        <p>Parece linda no papel, mas se você errar uma tesourinha, vai parar no lugar errado e demorar 20 minutos pra dar a volta.</p>
+                        <p>A estratégia é inspirada no urbanismo de Brasília: parece linda no papel, mas se você errar uma tesourinha, vai parar no lugar errado e demorar 20 minutos pra dar a volta.</p>
                         <ul>
                             <li><strong>Contra-Ataque "Lento mas Severo":</strong> Transição tão vagarosa que dá tempo do zagueiro adversário casar e ter dois filhos antes da bola chegar.</li>
-                            <li><strong>Marcação "Céu de Brasília":</strong> Um espaço tão aberto que dá pra ver o horizonte. O adversário passa porque ficou desorientado com tanta liberdade.</li>
+                            <li><strong>Marcação "Céu de Brasília":</strong> Um espaço tão aberto que dá pra ver o horizonte. O adversário passa porque ficou desorientado.</li>
                         </ul>
                     </div>
                     <div class="clube-card">
@@ -124,7 +128,7 @@
                         <p>Se o critério fosse habilidade, teríamos dois jogadores e um cone. Como é amizade, temos o seguinte:</p>
                         <ul>
                             <li><strong>Atacantes "Fome Zero":</strong> Alergia severa ao botão de passe. Só enxergam a rede e geralmente acertam a bandeirinha de escanteio.</li>
-                            <li><strong>Meio-Campo "Tesouro Nacional":</strong> Agilidade de um monumento de concreto e o passe final de um estagiário em primeiro dia.</li>
+                            <li><strong>Meio-Campo "Tesouro Nacional":</strong> MEI com agilidade de um monumento de concreto e passe de estagiário em primeiro dia.</li>
                             <li><strong>Zaga "Parede de Drywall":</strong> Parece sólida de longe, mas se o atacante der um sopro, ela esfarela. Destaque para o Bot (IA).</li>
                         </ul>
                     </div>
@@ -139,11 +143,11 @@
 
     <script>
         function openTab(id) {
-            var i, tabcontent;
-            tabcontent = document.getElementsByClassName("tab-pane");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-                tabcontent[i].classList.remove("active");
+            var i, panes;
+            panes = document.getElementsByClassName("tab-pane");
+            for (i = 0; i < panes.length; i++) {
+                panes[i].style.display = "none";
+                panes[i].classList.remove("active");
             }
             document.getElementById(id).style.display = "block";
             document.getElementById(id).classList.add("active");
