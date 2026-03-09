@@ -1,164 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Arctic Elite</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-    <header>
-        <nav class="nav-container">
-            <div class="logo">BSB<span class="ice">SÓFAR</span></div>
-            <ul class="nav-links">
-                <li><a href="#" onclick="openTab(event, 'home')">Início</a></li>
-                <li><a href="#" onclick="openTab(event, 'noticias')">Notícias</a></li>
-                <li><a href="#" onclick="openTab(event, 'elenco')">Elenco</a></li>
-                <li><a href="#" onclick="openTab(event, 'stats')">Stats</a></li>
-                <li><a href="#" onclick="openTab(event, 'clube')">O Clube</a></li>
-            </ul>
-        </nav>
-    </header>
+    const tabs = document.querySelectorAll(".nav-links a");
+    const panes = document.querySelectorAll(".tab-pane");
 
-    <main>
-        <section id="home" class="tab-pane active">
-            <div class="hero-center">
-                <div class="hero-content">
-                    <span class="sys-tag">PROTOCOL: BRASÍLIA_ELITE</span>
-                    <h1>GELO NO <span class="ice">SANGUE.</span><br>PLANALTO NO <span class="ice">CORAÇÃO.</span></h1>
-                    <p>A força monumental de Brasília nos gramados virtuais. Onde o "Tiki-Taka de Tartaruga" encontra a frieza do Planalto Central. Sem distrações, apenas o domínio estratégico.</p>
-                    <div class="hero-btns">
-                        <button class="btn-ice" onclick="openTab(event, 'stats')">VER PERFORMANCE</button>
-                        <button class="btn-ghost" onclick="openTab(event, 'clube')">LER DOSSIÊ</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+    function openTab(tabId) {
 
-        <section id="noticias" class="tab-pane">
-            <div class="container">
-                <h2 class="page-title">Boletim de Transmissão</h2>
-                <div class="news-list">
-                    <div class="news-item">
-                        <span class="ice">DATA: 08.03.2026</span>
-                        <h3>Magician: 358 Gols Registrados</h3>
-                        <p>Luigi segue ignorando as leis da física e carregando o time nas costas.</p>
-                    </div>
-                    <div class="news-item">
-                        <span class="ice">DATA: 05.03.2026</span>
-                        <h3>Protocolo de Assistências</h3>
-                        <p>Walison atinge 342 passes decisivos. O garçom de Brasília não descansa.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        panes.forEach(pane => {
+            pane.style.display = "none";
+            pane.classList.remove("active");
+        });
 
-        <section id="elenco" class="tab-pane">
-            <div class="container">
-                <h2 class="page-title">Unidades de Campo</h2>
-                <div class="squad-grid">
-                    <div class="squad-card">
-                        <img src="luigi_card.png" alt="Luigi">
-                        <div class="card-label"><span>69</span> LUIGI</div>
-                    </div>
-                    <div class="squad-card">
-                        <img src="walison_card.png" alt="Walison">
-                        <div class="card-label"><span>92</span> WALISON</div>
-                    </div>
-                    <div class="squad-card">
-                        <img src="nicolas_card.png" alt="Nicolas">
-                        <div class="card-label"><span>10</span> NICOLAS</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="stats" class="tab-pane">
-            <div class="container">
-                <h2 class="page-title">Relatório de Performance</h2>
-                <div class="stats-grid">
-                    <div class="stat-module">
-                        <div class="mod-img"><img src="nicolas_card.png" alt="Nicolas"></div>
-                        <div class="mod-data">
-                            <h3>NICOLAS <small>(Maestro)</small></h3>
-                            <div class="data-row">
-                                <div class="data-point ice-box"><small>GOLS</small> 103</div>
-                                <div class="data-point ice-box"><small>ASSIST</small> 97</div>
-                                <div class="data-point full"><small>PARTIDAS</small> 211</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="stat-module">
-                        <div class="mod-img"><img src="luigi_card.png" alt="Luigi"></div>
-                        <div class="mod-data">
-                            <h3>LUIGI <small>(Magician)</small></h3>
-                            <div class="data-row">
-                                <div class="data-point ice-box"><small>GOLS</small> 358</div>
-                                <div class="data-point"><small>MVP</small> 44</div>
-                                <div class="data-point"><small>JOGOS</small> 189</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="stat-module">
-                        <div class="mod-img"><img src="walison_card.png" alt="Walison"></div>
-                        <div class="mod-data">
-                            <h3>WALISON <small>(Insanity)</small></h3>
-                            <div class="data-row">
-                                <div class="data-point ice-box"><small>ASSIST</small> 342</div>
-                                <div class="data-point"><small>GOLS</small> 201</div>
-                                <div class="data-point"><small>JOGOS</small> 300</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="clube" class="tab-pane">
-            <div class="container">
-                <h2 class="page-title">Dossiê BSB Sófar</h2>
-                <div class="dossie-grid">
-                    <div class="dossie-box">
-                        <h3>Tática "Eixo Monumental"</h3>
-                        <p>Inspirada no urbanismo de Brasília: parece linda no papel, mas se você errar uma tesourinha, vai demorar 20 minutos pra dar a volta.</p>
-                        <ul>
-                            <li><strong>Contra-Ataque Lento:</strong> Transição tão devagar que o zagueiro rival casa e tem filhos antes da bola chegar.</li>
-                            <li><strong>Marcação Céu:</strong> Espaço tão aberto que dá pra ver o horizonte.</li>
-                        </ul>
-                    </div>
-                    <div class="dossie-box">
-                        <h3>🤡 Qualidade "Licitação"</h3>
-                        <p>Se o critério fosse habilidade, teríamos dois jogadores e um cone. Como é amizade, temos o seguinte:</p>
-                        <ul>
-                            <li><strong>Atacantes "Fome Zero":</strong> Alergia severa ao botão de passe. Só enxergam a rede.</li>
-                            <li><strong>Meio-Campo "Tesouro":</strong> Agilidade de um monumento e passe de estagiário.</li>
-                            <li><strong>Zaga "Drywall":</strong> Parece sólida de longe, mas um sopro a esfarela.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>BSB_SOFAR // 2026 // ARCTIC_PROTOCOL</p>
-    </footer>
-
-    <script>
-        function openTab(evt, tabId) {
-            evt.preventDefault();
-            var i, tabs;
-            tabs = document.getElementsByClassName("tab-pane");
-            for (i = 0; i < tabs.length; i++) {
-                tabs[i].style.display = "none";
-                tabs[i].classList.remove("active");
-            }
-            document.getElementById(tabId).style.display = "block";
-            document.getElementById(tabId).classList.add("active");
-            window.scrollTo(0, 0);
+        const activePane = document.getElementById(tabId);
+        if (activePane) {
+            activePane.style.display = "block";
+            activePane.classList.add("active");
         }
-    </script>
-</body>
-</html>
+
+        window.scrollTo(0,0);
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function(e){
+            e.preventDefault();
+            const tabId = this.getAttribute("onclick").match(/'([^']+)'/)[1];
+            openTab(tabId);
+        });
+    });
+
+    // garantir que a home abre
+    openTab("home");
+
+});
+</script>
