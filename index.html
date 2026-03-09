@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB SÓ FAR | Cyber-Ice Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>BSB SÓ FAR | Arctic Protocol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,19 +24,14 @@
 
     <main>
         <section id="home" class="tab-pane active">
-            <div class="hero">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <span class="system-tag">SYSTEM STATUS: OPERATIONAL</span>
-                        <h1>GELO NO <span class="ice">SANGUE.</span><br>PLANALTO NO <span class="ice">CORAÇÃO.</span></h1>
-                        <p>A força monumental de Brasília nos gramados virtuais. Onde o "Tiki-Taka de Tartaruga" encontra a frieza do Planalto Central.</p>
-                        <div class="hero-btns">
-                            <button class="btn-cyan" onclick="openTab('stats')">VER PERFORMANCE</button>
-                            <button class="btn-ghost" onclick="openTab('clube')">LER DOSSIÊ</button>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <img src="nicolas_card.png" alt="Destaque Maestro" class="floating">
+            <div class="hero-center">
+                <div class="hero-content">
+                    <span class="sys-tag">BRASÍLIA_SYSTEM_STATUS: ONLINE</span>
+                    <h1>GELO NO <span class="ice">SANGUE.</span><br>PLANALTO NO <span class="ice">CORAÇÃO.</span></h1>
+                    <p>A força monumental de Brasília nos gramados virtuais. Onde o "Tiki-Taka de Tartaruga" encontra a frieza do Planalto Central. Sem distrações, apenas o domínio estratégico.</p>
+                    <div class="hero-btns">
+                        <button class="btn-ice" onclick="openTab('stats')">RELATÓRIO DE STATS</button>
+                        <button class="btn-ghost" onclick="openTab('clube')">LER DOSSIÊ</button>
                     </div>
                 </div>
             </div>
@@ -45,14 +40,14 @@
         <section id="noticias" class="tab-pane">
             <div class="container">
                 <h2 class="page-title">Boletim de Transmissão</h2>
-                <div class="news-grid">
+                <div class="news-list">
                     <div class="news-item">
-                        <span class="ice">08.03.2026</span>
+                        <span class="ice">DATA: 08.03.2026</span>
                         <h3>Magician: 358 Gols Registrados</h3>
-                        <p>Luigi segue ignorando as leis da física e liderando a artilharia histórica.</p>
+                        <p>Luigi segue ignorando as leis da física e carregando o time nas costas.</p>
                     </div>
                     <div class="news-item">
-                        <span class="ice">05.03.2026</span>
+                        <span class="ice">DATA: 05.03.2026</span>
                         <h3>Protocolo de Assistências</h3>
                         <p>Walison atinge 342 passes decisivos. O garçom de Brasília não descansa.</p>
                     </div>
@@ -65,16 +60,16 @@
                 <h2 class="page-title">Unidades de Campo</h2>
                 <div class="squad-grid">
                     <div class="squad-card">
-                        <img src="luigi_card.png">
-                        <div class="card-label"><span>69</span> LUIGI</div>
+                        <img src="luigi_card.png" alt="Luigi">
+                        <div class="squad-label"><span>69</span> LUIGI</div>
                     </div>
                     <div class="squad-card">
-                        <img src="walison_card.png">
-                        <div class="card-label"><span>92</span> WALISON</div>
+                        <img src="walison_card.png" alt="Walison">
+                        <div class="squad-label"><span>92</span> WALISON</div>
                     </div>
                     <div class="squad-card">
-                        <img src="nicolas_card.png">
-                        <div class="card-label"><span>10</span> NICOLAS</div>
+                        <img src="nicolas_card.png" alt="Nicolas">
+                        <div class="squad-label"><span>10</span> NICOLAS</div>
                     </div>
                 </div>
             </div>
@@ -82,16 +77,16 @@
 
         <section id="stats" class="tab-pane">
             <div class="container">
-                <h2 class="page-title">Relatório de Performance</h2>
+                <h2 class="page-title">Performance Log</h2>
                 <div class="stats-grid">
                     <div class="stat-module">
                         <div class="mod-img"><img src="nicolas_card.png"></div>
                         <div class="mod-data">
                             <h3>NICOLAS <small>(Maestro)</small></h3>
-                            <div class="data-row">
-                                <div class="data-point"><small>GOLS</small> 103</div>
-                                <div class="data-point"><small>ASSIST</small> 97</div>
-                                <div class="data-point full"><small>PARTIDAS</small> 211</div>
+                            <div class="data-wrap">
+                                <div class="data-bit ice-border"><small>GOLS</small> 103</div>
+                                <div class="data-bit ice-border"><small>ASSIST</small> 97</div>
+                                <div class="data-bit full"><small>JOGOS</small> 211</div>
                             </div>
                         </div>
                     </div>
@@ -99,10 +94,10 @@
                         <div class="mod-img"><img src="luigi_card.png"></div>
                         <div class="mod-data">
                             <h3>LUIGI <small>(Magician)</small></h3>
-                            <div class="data-row">
-                                <div class="data-point ice-box"><small>GOLS</small> 358</div>
-                                <div class="data-point"><small>MVP</small> 44</div>
-                                <div class="data-point"><small>JOGOS</small> 189</div>
+                            <div class="data-wrap">
+                                <div class="data-bit ice-border"><small>GOLS</small> 358</div>
+                                <div class="data-bit"><small>MVP</small> 44</div>
+                                <div class="data-bit"><small>JOGOS</small> 189</div>
                             </div>
                         </div>
                     </div>
@@ -110,10 +105,10 @@
                         <div class="mod-img"><img src="walison_card.png"></div>
                         <div class="mod-data">
                             <h3>WALISON <small>(Insanity)</small></h3>
-                            <div class="data-row">
-                                <div class="data-point ice-box"><small>ASSIST</small> 342</div>
-                                <div class="data-point"><small>GOLS</small> 201</div>
-                                <div class="data-point"><small>JOGOS</small> 300</div>
+                            <div class="data-wrap">
+                                <div class="data-bit ice-border"><small>ASSIST</small> 342</div>
+                                <div class="data-bit"><small>GOLS</small> 201</div>
+                                <div class="data-bit"><small>JOGOS</small> 300</div>
                             </div>
                         </div>
                     </div>
@@ -125,20 +120,21 @@
             <div class="container">
                 <h2 class="page-title">O Dossiê BSB Sófar</h2>
                 <div class="dossie-grid">
-                    <div class="dossie-box">
-                        <h3>Tática "Eixo Monumental"</h3>
-                        <p>Estratégia inspirada no urbanismo de Brasília: linda no papel, mas um erro na tesourinha e você demora 20 minutos pra voltar.</p>
-                        <ul>
-                            <li><strong>Contra-Ataque Lento:</strong> Transição tão devagar que o zagueiro rival casa e tem filhos antes da bola chegar.</li>
-                            <li><strong>Marcação Céu:</strong> Espaço tão aberto que dá pra ver o horizonte.</li>
+                    <div class="dossie-module">
+                        <h3>A Tática "Eixo Monumental"</h3>
+                        <p class="sarcasm">Parece linda no papel, mas se você errar uma tesourinha, vai demorar 20 minutos pra dar a volta.</p>
+                        <ul class="dossie-list">
+                            <li><strong>Contra-Ataque Lento:</strong> Transição tão devagar que o zagueiro rival casa e tem dois filhos antes da bola chegar.</li>
+                            <li><strong>Marcação Céu de Brasília:</strong> Espaço tão aberto que dá pra ver o horizonte.</li>
                         </ul>
                     </div>
-                    <div class="dossie-box">
-                        <h3>Qualidade "Licitação"</h3>
-                        <p>Se o critério fosse habilidade, teríamos dois jogadores e um cone. Mas como é amizade:</p>
-                        <ul>
-                            <li><strong>Atacantes Fome Zero:</strong> Alergia severa ao botão de passe.</li>
-                            <li><strong>Zaga Drywall:</strong> Parece sólida, mas um sopro a esfarela.</li>
+                    <div class="dossie-module">
+                        <h3>🤡 Qualidade "Padrão Licitação"</h3>
+                        <p class="sarcasm">Se o critério fosse habilidade, teríamos dois jogadores e um cone. Como é amizade...</p>
+                        <ul class="dossie-list">
+                            <li><strong>Atacantes Fome Zero:</strong> Alergia severa ao botão de passe. Só enxergam a rede (ou a bandeirinha de escanteio).</li>
+                            <li><strong>Meio-Campo Tesouro:</strong> Agilidade de um monumento de concreto e o passe final de um estagiário no 1º dia.</li>
+                            <li><strong>Zaga Drywall:</strong> Parece sólida de longe, mas se o atacante der um sopro, ela esfarela.</li>
                         </ul>
                     </div>
                 </div>
@@ -147,7 +143,7 @@
     </main>
 
     <footer>
-        <p>TERMINAL BSB_SOFAR // 2026 // CYBER_ARCTIC</p>
+        <p>BSB_SOFAR // 2026 // ARCTIC_STATION</p>
     </footer>
 
     <script>
